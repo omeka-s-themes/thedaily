@@ -1,0 +1,7 @@
+{
+    "name": "omeka-s-themes/thedaily",
+    "type": "omeka-s-theme",
+    "require": {
+        "omeka/omeka-s": "*"
+    }
+}

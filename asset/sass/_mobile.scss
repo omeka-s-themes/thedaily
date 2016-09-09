@@ -1,0 +1,175 @@
+/* @group ----- Generic HTML Elements ----- */
+
+html {
+    font-size: 1.5 * $scalable-font-size;
+    line-height: 1.5 * $scalable-line-height;
+}
+
+h1 {
+    font-size: 2.25 * $scalable-font-size;
+    line-height: 2 * $scalable-line-height;
+    margin: 0 0 rhythm(1, 1.75 * $scalable-font-size);
+}
+
+h2 {
+    font-size: 2 * $scalable-font-size;
+    line-height: 2 * $scalable-line-height;
+    margin: rhythm(1, 2 * $base-font-size) 0;
+}
+
+h3 {
+    font-size: 1.75 * $scalable-font-size;
+    line-height: 1.5 * $scalable-line-height;
+    margin: rhythm(1, 1.75 * $base-font-size) 0;
+}
+
+h4 {
+    margin: rhythm(1, 1.5 * $base-font-size) 0;
+    font-size: 1.5 * $scalable-font-size;
+    line-height: 1.5 * $scalable-line-height;
+}
+
+    /* @group ----- Form elements ----- */
+
+    input,
+    textarea,
+    button,
+    select {
+        font-size: 1.5 * $scalable-font-size;
+        line-height: 1.5 * $scalable-line-height;
+        margin: 0;
+    }
+
+    form .field {
+        align-items: center;
+    }
+
+    form .field .two.columns,
+    form .field > label,
+    form .field > .label {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: rhythm(.25);
+    }
+
+    form .field .five.columns,
+    form .field > .inputs {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* @end */
+
+/* @end */
+
+/* @group ----- Containers ----- */
+
+#content {
+    padding: rhythm() rhythm() 0;
+}
+
+/* @end */
+
+/* @group ----- Navigation ----- */
+
+.secondary-nav li a,
+.pagination,
+.pagination input[type="text"],
+.item-pagination {
+    font-size: $scalable-font-size;
+}
+
+
+/* @end */
+
+/* @group ----- Header ----- */
+
+header {
+    padding: rhythm(.5) rhythm();
+}
+
+#top-nav ul ul ul li {
+    font-size: $scalable-font-size;
+    line-height: $scalable-line-height;
+}
+
+/* @end */
+
+/* @group ----- Footer ----- */
+
+footer {
+    padding: 0 rhythm() rhythm();
+}
+
+/* @end */
+
+/* @group ----- Home ----- */
+
+div#featured {
+    font-weight: normal;
+}
+
+#featured .record {
+    min-height: 0;
+    width: 100% !important;
+}
+
+#featured .featured-meta {
+    padding: 0;
+    max-width: 100%;
+}
+
+/* @end */
+
+/* @group ----- Browse ----- */
+
+.browse #outputs,
+#sort-links {
+    font-size: $scalable-font-size;
+}
+
+.records .hentry {
+    font-size: 1.5 * $scalable-font-size;
+    line-height: 1.5 * $scalable-line-height;
+    width: calc(50% - #{rhythm()});
+}
+
+.collection.hentry h2 {
+    font-size: 1.5 * $scalable-font-size;
+    line-height: 1.5 * $scalable-line-height;
+}
+
+/* @end */
+
+/* @group ----- Show ----- */
+
+.element h3,
+.element-text {
+    font-size: 1.5 * $scalable-font-size;
+    width: 100%;
+    text-align: left;
+}
+
+.element-text:not(:first-of-type) {
+    margin-top: rhythm(.25);
+    @include leading-border(1px, .25, $base-font-size, solid);
+}
+
+/* @end */
+
+/* @group ----- Advanced Item Search ----- */
+
+button.add_search {
+    margin-left: 0;
+    font-size: 1.5 * $scalable-font-size;
+}
+
+/* @end */
+
+/* @group ----- Exhibits ----- */
+
+#exhibit-pages {
+    @include bleed(rhythm() rhythm() 0);
+}
+
+/* @end */

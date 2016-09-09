@@ -1,0 +1,26 @@
+//Typography
+
+    //Used for managing margins and padding
+    $base-font-size: 18px;
+    $base-line-height: 24px;
+    $rhythm-unit: "px";
+
+    //Used for text
+    $scalable-font-size: 3vmin;
+    $scalable-line-height: 4.5vmin;
+
+    $heading-font: "Archivo Black", sans-serif;
+    $body-font: "Assistant", sans-serif;
+
+//Colors
+
+$primary-color: yellow;
+
+//Susy
+$susy: (
+  columns: 16,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);

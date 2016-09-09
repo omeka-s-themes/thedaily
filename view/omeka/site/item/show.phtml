@@ -1,0 +1,45 @@
+<?php $escape = $this->plugin('escapeHtml'); ?>
+<?php $this->htmlElement('body')->appendAttribute('class', 'item resource show'); ?>
+<?php $this->headScript()->prependFile($this->assetUrl('js/jquery.chocolat.min.js')); ?>
+<?php $this->headLink()->prependStylesheet($this->assetUrl('css/chocolat.css')); ?>
+<script>
+    jQuery(document).ready(function(){
+        var inContainer = jQuery("#itemfiles-nav").Chocolat({
+        imageSize: "default",
+        loop: true,
+        fullscreen: true,
+        container: "#itemfiles"
+        }).data("chocolat");
+
+        if (typeof inContainer != "undefined") {
+            inContainer.api().open()
+        }
+    });
+</script>
+
+<div id="content" role="navigation">
+    <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
+    <h3><?php echo $this->translate('Item'); ?></h3>
+    <?php if ($item->media()): ?>
+    <div id="itemfiles" style="width: 100%; height: 50vh; background: #E0E0E0; margin:auto;"></div>
+    <div id="itemfiles-nav" class="media-list">
+        <?php foreach ($item->media() as $media): ?>
+            <a href="<?php echo $media->originalUrl(); ?>" class="media resource chocolat-image">
+                <img src="<?php echo $escape($media->thumbnailUrl('medium')); ?>" title="<?php echo $escape($media->displayTitle()); ?>">
+            </a>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
+    <?php echo $item->displayValues(); ?>
+    <div class="property">
+        <?php $itemSets = $item->itemSets(); ?>
+        <?php if (count($itemSets) > 0): ?>
+        <h4><?php echo $this->translate('Item Sets'); ?></h4>
+        <?php foreach ($item->itemSets() as $itemSet): ?>
+        <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+        <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+
+    <?php $this->trigger('view.show.after'); ?>
+</div>
