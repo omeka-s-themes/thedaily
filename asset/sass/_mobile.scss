@@ -8,23 +8,23 @@ html {
 h1 {
     font-size: 2.25 * $scalable-font-size;
     line-height: 2 * $scalable-line-height;
-    margin: 0 0 rhythm(1, 1.75 * $scalable-font-size);
+    margin: 0 0 $spacing-l;
 }
 
 h2 {
     font-size: 2 * $scalable-font-size;
     line-height: 2 * $scalable-line-height;
-    margin: rhythm(1, 2 * $base-font-size) 0;
+    margin: $spacing-l 0;
 }
 
 h3 {
     font-size: 1.75 * $scalable-font-size;
     line-height: 1.5 * $scalable-line-height;
-    margin: rhythm(1, 1.75 * $base-font-size) 0;
+    margin: $spacing-l 0;
 }
 
 h4 {
-    margin: rhythm(1, 1.5 * $base-font-size) 0;
+    margin: $spacing-l 0;
     font-size: 1.5 * $scalable-font-size;
     line-height: 1.5 * $scalable-line-height;
 }
@@ -49,7 +49,7 @@ h4 {
     form .field > .label {
         width: 100%;
         padding-right: 0;
-        margin-bottom: rhythm(.25);
+        margin-bottom: $spacing-s;
     }
 
     form .field .five.columns,
@@ -65,7 +65,7 @@ h4 {
 /* @group ----- Containers ----- */
 
 #content {
-    padding: rhythm() rhythm() 0;
+    padding: $spacing-l $spacing-l 0;
 }
 
 /* @end */
@@ -85,7 +85,7 @@ h4 {
 /* @group ----- Header ----- */
 
 header {
-    padding: rhythm(.5) rhythm();
+    padding: $spacing-m $spacing-l;
 }
 
 #top-nav ul ul ul li {
@@ -98,7 +98,7 @@ header {
 /* @group ----- Footer ----- */
 
 footer {
-    padding: 0 rhythm() rhythm();
+    padding: 0 $spacing-l $spacing-l;
 }
 
 /* @end */
@@ -131,7 +131,7 @@ div#featured {
 .records .hentry {
     font-size: 1.5 * $scalable-font-size;
     line-height: 1.5 * $scalable-line-height;
-    width: calc(50% - #{rhythm()});
+    width: calc(50% - #{$spacing-l});
 }
 
 .collection.hentry h2 {
@@ -151,8 +151,9 @@ div#featured {
 }
 
 .element-text:not(:first-of-type) {
-    margin-top: rhythm(.25);
-    @include leading-border(1px, .25, $base-font-size, solid);
+    margin-top: $spacing-s;
+    padding-top: $spacing-s - 1px;
+    border-top: 1px solid;
 }
 
 /* @end */
@@ -169,7 +170,7 @@ button.add_search {
 /* @group ----- Exhibits ----- */
 
 #exhibit-pages {
-    @include bleed(rhythm() rhythm() 0);
+    @include bleed($spacing-l $spacing-l 0);
 }
 
 /* @end */

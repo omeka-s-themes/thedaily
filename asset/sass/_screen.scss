@@ -21,23 +21,23 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 1.75 * $scalable-font-size;
     line-height: 2 * $scalable-line-height;
-    margin: 0 0 rhythm(1, 1.75 * $scalable-font-size);
+    margin: 0 0 $spacing-l;
 }
 
 h2 {
     font-size: 1.5 * $scalable-font-size;
     line-height: 2 * $scalable-line-height;
-    margin: rhythm(1, 1.5 * $base-font-size) 0;
+    margin: $spacing-l 0;
 }
 
 h3 {
     font-size: 1.25 * $scalable-font-size;
     line-height: $scalable-line-height;
-    margin: rhythm(1, 1.25 * $base-font-size) 0;
+    margin: $spacing-l 0;
 }
 
 h4 {
-    margin: rhythm() 0;
+    margin: $spacing-l 0;
 }
 
 a {
@@ -52,7 +52,7 @@ span a {
 
 p,
 ul {
-    margin: rhythm() 0;
+    margin: $spacing-l 0;
 }
 
     /* @group ----- Form Elements ----- */
@@ -77,11 +77,11 @@ ul {
         width: 100%;
         height: 1.75 * $base-line-height;
         appearance: none;
-        padding: rhythm(.25) rhythm(1.25) rhythm(.25) rhythm(.5);
+        padding: $spacing-s (1.25 * $spacing-l) $spacing-s $spacing-m;
         font-family: $body-font;
         border: 1px solid #ccc;
         border-radius: 3px;
-        background: #fff url('../img/select-arrow.svg') right rhythm(.5) center no-repeat;
+        background: #fff url('../img/select-arrow.svg') right $spacing-m center no-repeat;
         background-size: .5 * $scalable-font-size;
     }
 
@@ -98,7 +98,7 @@ ul {
         appearance: none;
         border: 1px solid #ccc;
         background-color: #fff;
-        padding: rhythm(.25);
+        padding: $spacing-s;
         border-radius: 0;
     }
 
@@ -106,7 +106,7 @@ ul {
     button,
     input[type="submit"] {
         appearance: none;
-        padding: rhythm(.25) rhythm(.5);
+        padding: $spacing-s $spacing-m;
         background-color: $primary-color;
         border: 3px solid #000;
         font-family: $heading-font;
@@ -114,14 +114,14 @@ ul {
     }
 
     [type="submit"] {
-        margin: rhythm() 0;
+        margin: $spacing-l 0;
     }
 
 
     form .field {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: rhythm();
+        margin-bottom: $spacing-l;
         align-items: flex-start;
     }
 
@@ -132,17 +132,17 @@ ul {
     }
 
     form .field .explanation {
-        margin-bottom: rhythm(.25);
+        margin-bottom: $spacing-s;
     }
 
     form .field .field-meta {
         width: span(3 of 12 alpha);
-        padding-right: rhythm(.5);
+        padding-right: $spacing-m;
     }
 
     form .field > .inputs {
         width: span(9 of 12 omega);
-        padding-left: rhythm(.5);
+        padding-left: $spacing-m;
     }
 
     form .field > .inputs .value {
@@ -157,7 +157,7 @@ ul {
 
     form .field > input[type="checkbox"] + label {
         width: auto;
-        margin: 0 0 0 rhythm(.25);
+        margin: 0 0 0 $spacing-s;
     }
 
     .collapsible {
@@ -172,10 +172,10 @@ ul {
     /* @group ----- Tables ----- */
 
     table {
-        margin: rhythm(2) 0;
+        margin: (2 * $spacing-l) 0;
         width: 100%;
         border-collapse: separate;
-        border-spacing: rhythm(.125);
+        border-spacing: .5 * $spacing-s;
     }
 
     th:not(:empty) {
@@ -186,7 +186,7 @@ ul {
 
     td,
     th {
-        padding: rhythm(.25) rhythm(.5);
+        padding: $spacing-s $spacing-m;
     }
 
     td {
@@ -210,7 +210,7 @@ nav li {
 }
 
 .secondary-nav ul {
-    margin: 0 0 rhythm();
+    margin: 0 0 $spacing-l;
 }
 
 .secondary-nav li {
@@ -221,7 +221,7 @@ nav li {
     background-color: $primary-color;
     font-family: $heading-font;
     color: #000;
-    padding: rhythm(.25) rhythm(.5);
+    padding: $spacing-s $spacing-m;
     font-size: .75 * $scalable-font-size;
 }
 
@@ -242,9 +242,9 @@ nav li {
 
 .pagination input[type="text"] {
     border: 2px solid #000;
-    width: rhythm(2);
+    width: 2 * $spacing-l;
     text-align: center;
-    height: rhythm(1.25);
+    height: 1.25 * $spacing-l;
     font-family: $heading-font;
     font-size: .75 * $base-font-size;
 }
@@ -253,7 +253,7 @@ nav li {
     background-color: $primary-color;
     font-family: $heading-font;
     color: #000;
-    padding: rhythm(.25) rhythm(.5);
+    padding: $spacing-s $spacing-m;
     border: 0;
     display: inline;
 }
@@ -261,13 +261,13 @@ nav li {
 .pagination_previous a:before {
     content: $fa-var-caret-left;
     font-family: "FontAwesome";
-    margin: 0 rhythm(.25);
+    margin: 0 $spacing-s;
 }
 
 .pagination_next a:before {
     content: $fa-var-caret-right;
     font-family: "FontAwesome";
-    margin: 0 rhythm(.25);
+    margin: 0 $spacing-s;
 }
 
 .pagination .row-count {
@@ -284,7 +284,7 @@ nav li {
 
 .item-pagination a {
     background-color: $primary-color;
-    padding: rhythm(.25) rhythm(.5);
+    padding: $spacing-s $spacing-m;
 }
 
 /* @end */
@@ -302,13 +302,13 @@ nav li {
 .site-title {
     font-family: $heading-font;
     float: left;
-    padding: rhythm(.25) 0;
+    padding: $spacing-s 0;
 }
 
 header {
     background-color: #000;
     vertical-align: top;
-    padding: rhythm(.5) rhythm(2);
+    padding: $spacing-m (2 * $spacing-l);
     text-align: right;
     position: relative;
 }
@@ -349,9 +349,9 @@ header nav > ul {
     background-color: rgba(0,0,0,.9);
     z-index: 9999;
     margin: 0;
-    padding: rhythm(2);
+    padding: (2 * $spacing-l);
     text-align: left;
-    height: calc(100vh - #{rhythm(2)});
+    height: calc(100vh - #{2 * $spacing-l});
     color: #fff;
     vertical-align: top;
 }
@@ -373,7 +373,7 @@ header nav > ul {
 
 #top-nav > ul > li {
     font-family: $heading-font;
-    padding-bottom: rhythm();
+    padding-bottom: $spacing-l;
     width: 30%;
 }
 
@@ -385,13 +385,13 @@ header nav > ul {
     font-family: $body-font;
 
     &:not(:last-of-type) {
-        margin-bottom: rhythm(.5);
+        margin-bottom: $spacing-m;
     }
 }
 
 #top-nav ul ul {
     padding-left: 0;
-    margin: rhythm(.5) 0 0;
+    margin: $spacing-m 0 0;
 }
 
 #top-nav ul ul ul li {
@@ -400,7 +400,7 @@ header nav > ul {
 
     &:before {
         content: "\2014";
-        margin-right: rhythm(.25);
+        margin-right: $spacing-s;
     }
 }
 
@@ -419,7 +419,7 @@ header nav > ul {
     color: #fff;
     display: inline-block;
     width: 50%;
-    margin-right: rhythm(.5);
+    margin-right: $spacing-m;
     font-size: 2 * $scalable-font-size;
     height: 2 * $scalable-line-height;
     padding: 0;
@@ -437,8 +437,8 @@ header nav > ul {
     cursor: pointer;
     font-size: 2 * $scalable-font-size;
     height: 2 * $scalable-line-height;
-    padding-left: rhythm(.25);
-    padding-right: rhythm(.25);
+    padding-left: $spacing-s;
+    padding-right: $spacing-s;
     margin: 0;
     line-height: 0;
 }
@@ -468,7 +468,7 @@ div#featured {
 }
 
 #featured .record {
-    margin-bottom: rhythm();
+    margin-bottom: $spacing-l;
     color: #fff;
     overflow: hidden;
     position: relative;
@@ -478,9 +478,9 @@ div#featured {
     justify-content: center;
     background-color: #e7e7e7;
     z-index: 0;
-    padding: rhythm();
+    padding: $spacing-l;
     min-height: 30vh;
-    width: calc(50% - #{rhythm(.5)});
+    width: calc(50% - #{$spacing-m});
 }
 
 #featured .record a {
@@ -488,12 +488,12 @@ div#featured {
 }
 
 #featured .featured-meta {
-    padding: 0 rhythm();
+    padding: 0 $spacing-l;
     max-width: 75%;
 }
 
 #featured .featured-meta > * {
-    padding: rhythm(.5);
+    padding: $spacing-m;
     margin: 0;
     background-color: #000;
     display: inline-block;
@@ -528,7 +528,7 @@ div#featured {
 /* @group ----- Footer ----- */
 
 footer {
-    padding: 0 rhythm(2) rhythm();
+    padding: 0 (2 * $spacing-l) $spacing-l;
 }
 
 /* @end */
@@ -550,7 +550,7 @@ footer {
     background-color: $primary-color;
     font-family: $heading-font;
     color: #000;
-    padding: rhythm(.25) rhythm(.5);
+    padding: $spacing-s $spacing-m;
     font-size: .75 * $scalable-font-size;
 }
 
@@ -563,32 +563,32 @@ footer {
     list-style: none;
     padding-left: 0;
     display: inline-block;
-    margin: 0 0 rhythm();
+    margin: 0 0 $spacing-l;
 }
 
 #sort-links li {
     list-style-type: none;
     display: inline-block;
-    margin: 0 rhythm(.125);
+    margin: 0 (.5 * $spacing-s);
 }
 
 #sort-links a {
     background-color: $primary-color;
     font-family: $heading-font;
     color: #000;
-    padding: rhythm(.25) rhythm(.5);
+    padding: $spacing-s $spacing-m;
 }
 
 #sort-links .asc a:after {
     content: $fa-var-caret-up;
     font-family: "FontAwesome";
-    margin-left: rhythm(.25);
+    margin-left: $spacing-s;
 }
 
 #sort-links .desc a:after {
     content: $fa-var-caret-down;
     font-family: "FontAwesome";
-    margin-left: rhythm(.25);
+    margin-left: $spacing-s;
 }
 
 .resource-list {
@@ -597,7 +597,7 @@ footer {
     justify-content: flex-start;
     align-content: flex-start;
     width: 100%;
-    margin: rhythm() 0 0;
+    margin: $spacing-l 0 0;
     list-style: none;
     padding-left: 0;
 }
@@ -615,8 +615,8 @@ footer {
 .resource-list .resource {
     font-size: .75 * $scalable-font-size;
     line-height: .75 * $scalable-line-height;
-    width: calc(25% - #{rhythm()});
-    margin: 0 rhythm() rhythm(2) 0;
+    width: calc(25% - #{$spacing-l});
+    margin: 0 $spacing-l (2 * $spacing-l) 0;
     list-style-type: none;
 
     &:nth-child(4n) {
@@ -667,7 +667,6 @@ footer {
     font-size: $base-font-size;
     padding: .25 * $base-line-height;
     margin-top: 0;
-    margin-left: .5 * $base-line-height;
 }
 
 #itemfiles .chocolat-overlay {
@@ -675,16 +674,16 @@ footer {
 }
 
 #itemfiles-nav {
-    margin: rhythm(.5) 0 rhythm(2);
+    margin: $spacing-m 0 (2 * $spacing-l);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #itemfiles-nav a {
-    height: rhythm(3);
+    height: (3 * $spacing-l);
     display: inline-block;
-    margin: 0  rhythm(.25) rhythm(.25) 0;
+    margin: 0  $spacing-s $spacing-s 0;
 }
 
 #itemfiles-nav img {
@@ -692,7 +691,7 @@ footer {
 }
 
 .property {
-    margin-bottom: rhythm();
+    margin-bottom: $spacing-l;
     vertical-align: top;
     overflow: hidden;
 }
@@ -709,15 +708,16 @@ footer {
 
 .value {
     display: block;
-    width: calc(75% - #{rhythm()});
+    width: calc(75% - #{$spacing-l});
     height: auto;
     text-align: left;
     float: right;
 }
 
 .value:not(:first-of-type) {
-    margin-top: rhythm(.5);
-    @include leading-border(1px, .5, $base-font-size, solid);
+    margin-top: $spacing-m;
+    padding-top: $spacing-m - 1px;
+    border-top: 1px solid;
 }
 
 .value > p:first-child {
@@ -743,11 +743,11 @@ footer {
 #advanced-search .value {
     display: flex;
     justify-content: space-between;
-    margin-bottom: rhythm(.5);
+    margin-bottom: $spacing-m;
 }
 
 #advanced-search .value:not(:first-child) {
-    margin-top: rhythm(.5);
+    margin-top: $spacing-m;
 }
 
 #advanced-search #property-queries .value:only-of-type > select,
@@ -757,18 +757,18 @@ footer {
 
 #advanced-search #property-queries .value > select,
 #advanced-search #property-queries .value > input[type="text"] {
-    width: calc((100% - #{rhythm(2.5)}) / 3);
+    width: calc((100% - #{2.5 * $spacing-l}) / 3);
 }
 
 #advanced-search #has-property-queries .value:not(:only-of-type) > select,
 #advanced-search #has-property-queries .value:not(:only-of-type) > input[type="text"] {
-    width: calc((100% - #{rhythm(2.5)}) / 2);
+    width: calc((100% - #{2.5 * $spacing-l}) / 2);
 }
 
 #advanced-search button.remove-value {
     text-indent: -9999px;
-    width: rhythm(1.75);
-    height: rhythm(1.75);
+    width: 1.75 * $spacing-l;
+    height: 1.75 * $spacing-l;
     position: relative;
     background-color: #000;
     color: #fff;
@@ -808,7 +808,7 @@ footer {
 }
 
 #search-filters > ul > li {
-    margin-right: rhythm();
+    margin-right: $spacing-l;
     border-bottom: 2px solid;
 }
 
@@ -821,9 +821,9 @@ footer {
 }
 
 #search-results img {
-    height: rhythm(3);
+    height: 3 * $spacing-l;
     vertical-align: top;
-    margin-right: rhythm(.5);
+    margin-right: $spacing-m;
 }
 
 #search-results td > * {
@@ -837,9 +837,9 @@ footer {
 
 .sub-menu {
     background-color: $primary-color;
-    padding: rhythm();
-    @include bleed(rhythm() rhythm(2) 0);
-    margin-bottom: rhythm();
+    padding: $spacing-l;
+    @include bleed($spacing-l (2 * $spacing-l) 0);
+    margin-bottom: $spacing-l;
 }
 
 .sub-menu h4 {
@@ -851,13 +851,13 @@ footer {
 }
 
 .sub-menu > ul > li {
-    margin: 0 rhythm(.25) rhythm(.25) 0;
+    margin: 0 $spacing-s $spacing-s 0;
 }
 
 .sub-menu > ul > li:not(:last-of-type):after {
     content: "\00b7";
     display: inline-block;
-    margin-left: rhythm(.25);
+    margin-left: $spacing-s;
 }
 
 .sub-menu .current a {
@@ -867,9 +867,9 @@ footer {
 .site-page-pagination {
     background-color: #000;
     color: #ccc;
-    padding: rhythm();
-    margin-top: rhythm(2);
-    margin-bottom: rhythm(2);
+    padding: $spacing-l;
+    margin-top: 2 * $spacing-l;
+    margin-bottom: 2 * $spacing-l;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -877,7 +877,7 @@ footer {
 }
 
 .site-page-pagination a {
-    padding: rhythm(.25);
+    padding: $spacing-s;
     color: $primary-color;
     display: inline-block;
 }
@@ -935,7 +935,7 @@ body.menu-open {
 }
 
 #content {
-    padding: rhythm() rhythm(2) 0;
+    padding: $spacing-l (2 * $spacing-l) 0;
 }
 
 #content > h2:first-child {
