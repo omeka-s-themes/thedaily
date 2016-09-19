@@ -882,10 +882,29 @@ footer {
     display: inline-block;
 }
 
+.break {
+    width: 100%;
+    clear: both;
+    height: 1px;
+    margin-bottom: -1px;
+}
+
+.break.opaque {
+    background-color: #000;
+}
+
 .item-showcase {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: ($spacing-l - 1px) 0 0;
+    margin: $spacing-l 0;
+
+    .item.resource {
+        margin-bottom: $spacing-l;
+    }
 }
 
 .right.file {
@@ -902,8 +921,18 @@ footer {
 .file .resource {
     display: flex;
     flex-direction: column;
-    flex-basis: min-content;
+    flex-basis: content;
     width: min-content;
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+    }
+
+    & > a:first-child {
+        width: max-content;
+        max-width: 100%;
+    }
 }
 
 .item-showcase .resource h3,
