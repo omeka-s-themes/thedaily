@@ -1,4 +1,5 @@
 <?php
+$escape = $this->plugin('escapeHtml');
 $this->htmlElement('html')->setAttribute('lang', 'en');
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
@@ -23,8 +24,16 @@ $this->trigger('view.layout');
     <?php echo $this->htmlElement('body'); ?>
         <header>
             <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $site->title(); ?></a>
+            <div id="search-container">
+                <form action="<?php echo $this->escapeHtml($this->url('site/resource', ['controller' => 'item','action' => 'browse'], true)); ?>" id="search-form" class="closed">
+                    <?php $searchValue = isset($_GET['property'][0]['in'][0]) ? $_GET['property'][0]['in'][0] : ''; ?>
+                    <input type="text" name="property[0][in][]" value="<?php echo $escape($searchValue); ?>">
+                    <button type="submit"><?php echo $this->translate('Search'); ?></button>
+                </form>
+                <button type="button" class="search-toggle" aria-label="Toggle search"></button>
+            </div>
             <nav id="top-nav" class="closed">
-                <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
+            <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
             <?php
             echo $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
