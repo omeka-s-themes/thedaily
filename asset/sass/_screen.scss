@@ -893,6 +893,19 @@ footer {
     display: inline-block;
 }
 
+.caption {
+    font-size: .875 * $base-font-size;
+    line-height: .875 * $base-line-height;
+}
+
+.caption > *:first-child {
+    margin-top: 0;
+}
+
+.caption > *:last-child {
+    margin-bottom: 0;
+}
+
 .break {
     width: 100%;
     clear: both;
