@@ -13,6 +13,10 @@ html {
     font-weight: 400;
 }
 
+body {
+    width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
     font-weight: normal;
@@ -306,8 +310,13 @@ nav li {
 
 .site-title {
     font-family: $heading-font;
-    float: left;
     padding: $spacing-s 0;
+    margin-right: auto;
+}
+
+.site-title img {
+    max-height: 2 * $spacing-l;
+    width: auto;
 }
 
 header {
@@ -316,11 +325,9 @@ header {
     padding: $spacing-m (2 * $spacing-l);
     text-align: right;
     position: relative;
-}
-
-header > * {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 header a {
@@ -388,9 +395,10 @@ header nav > ul {
 
 #top-nav > ul > li li {
     font-family: $body-font;
+    display: block;
 
     &:not(:last-of-type) {
-        margin-bottom: $spacing-m;
+        margin-bottom: $spacing-s;
     }
 }
 
