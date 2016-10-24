@@ -139,6 +139,13 @@ div#featured {
     line-height: 1.5 * $scalable-line-height;
 }
 
+.resource-list .resource {
+    font-size: $scalable-font-size;
+    line-height: $scalable-line-height;
+    width: calc(50% - #{$spacing-l});
+}
+
+
 /* @end */
 
 /* @group ----- Show ----- */
