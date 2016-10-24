@@ -134,6 +134,10 @@ ul {
         align-items: flex-start;
     }
 
+    form .field.required .field-meta:after {
+        content: "*";
+    }
+
     form .field .field-meta,
     form .field label,
     form .field .label {
@@ -741,8 +745,21 @@ footer {
     margin-bottom: 0;
 }
 
+.value .language {
+    font-size: .875 * $base-font-size;
+    background-color: #e7e7e7;
+    display: inline-block;
+    padding: 0 $spacing-s;
+}
+
 .value a {
     background-color: $primary-color;
+}
+
+.value a.metadata-browse-link {
+    width: max-content;
+    padding: 0 $spacing-s;
+    margin-top: $spacing-s;
 }
 
 .show #output-format-list {
@@ -974,7 +991,6 @@ footer {
 .file .resource h3 {
     font-size: $scalable-font-size;
     margin: (.5 * $scalable-line-height) 0 0;
-    word-break: break-all;
 }
 
 .media-render {
