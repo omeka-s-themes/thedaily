@@ -1,13 +1,15 @@
 <?php $escape = $this->plugin('escapeHtml');?>
 <?php $this->htmlElement('body')->appendAttribute('class', 'item resource browse'); ?>
 <?php if (isset($itemSet)): ?>
-<?php $this->htmlElement('body')->appendAttribute('class', 'item-set'); ?>
+<?php $this->htmlElement('body')->appendAttribute('class', 'item-set show'); ?>
 <?php endif; ?>
 
 <div id="content" role="main">
     <?php if (isset($itemSet)): ?>
+        <div class="show-header">
         <?php echo $this->pageTitle($itemSet->displayTitle(), 2); ?>
         <h3><?php echo $this->translate('Item Set'); ?></h3>
+        </div>
         <div class="metadata">
             <?php echo $itemSet->displayValues(); ?>
         </div>
