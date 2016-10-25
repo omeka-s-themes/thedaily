@@ -158,17 +158,11 @@ div#featured {
 
 /* @group ----- Show ----- */
 
-.element h3,
-.element-text {
+.property h4,
+.property .value {
     font-size: 1.5 * $scalable-font-size;
     width: 100%;
     text-align: left;
-}
-
-.element-text:not(:first-of-type) {
-    margin-top: $spacing-s;
-    padding-top: $spacing-s - 1px;
-    border-top: 1px solid;
 }
 
 /* @end */
