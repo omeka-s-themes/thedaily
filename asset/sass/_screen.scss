@@ -764,6 +764,13 @@ footer {
     margin-top: $spacing-s;
 }
 
+.value.items img {
+    height: 2 * $spacing-l;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .show #output-format-list {
     margin: 0;
 }
