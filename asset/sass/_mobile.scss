@@ -96,9 +96,18 @@ header {
     padding: $spacing-m $spacing-l;
 }
 
+#top-nav>ul {
+    display: block;
+    overflow: scroll;
+}
+
 #top-nav ul ul ul li {
     font-size: $scalable-font-size;
     line-height: $scalable-line-height;
+}
+
+#top-nav>ul>li {
+    width: 100%;
 }
 
 /* @end */
@@ -159,27 +168,11 @@ div#featured {
 /* @group ----- Show ----- */
 
 .property h4,
-.property .value {
+.property .value,
+.item-with-metadata .media-list {
     font-size: 1.5 * $scalable-font-size;
     width: 100%;
     text-align: left;
-}
-
-/* @end */
-
-/* @group ----- Advanced Item Search ----- */
-
-button.add_search {
-    margin-left: 0;
-    font-size: 1.5 * $scalable-font-size;
-}
-
-/* @end */
-
-/* @group ----- Exhibits ----- */
-
-#exhibit-pages {
-    @include bleed($spacing-l $spacing-l 0);
 }
 
 /* @end */
