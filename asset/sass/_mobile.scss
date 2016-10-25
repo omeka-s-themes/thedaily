@@ -32,19 +32,22 @@ h4 {
     /* @group ----- Form elements ----- */
 
     input,
+    input[type="text"],
     textarea,
     button,
+    .button,
     select {
         font-size: 1.5 * $scalable-font-size;
         line-height: 1.5 * $scalable-line-height;
         margin: 0;
+        height: auto;
     }
 
     form .field {
         align-items: center;
     }
 
-    form .field .two.columns,
+    form .field .field-meta,
     form .field > label,
     form .field > .label {
         width: 100%;
@@ -52,10 +55,15 @@ h4 {
         margin-bottom: $spacing-s;
     }
 
-    form .field .five.columns,
     form .field > .inputs {
         width: 100%;
         padding-left: 0;
+    }
+
+    .add-value.button {
+        font-size: 1.5 * $scalable-font-size;
+        line-height: 1.5 * $scalable-line-height;
+        height: auto;
     }
 
     /* @end */

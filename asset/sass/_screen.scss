@@ -79,7 +79,7 @@ ul {
 
     select {
         width: 100%;
-        height: 1.75 * $base-line-height;
+        height: 1.5 * $scalable-line-height;
         appearance: none;
         padding: $spacing-s (1.25 * $spacing-l) $spacing-s $spacing-m;
         font-family: $body-font;
@@ -97,7 +97,7 @@ ul {
     input[type="date"],
     input[type="datetime-local"],
     textarea {
-        height: 1.75 * $base-line-height;
+        height: 1.5 * $scalable-line-height;
         width: 100%;
         appearance: none;
         border: 1px solid #ccc;
@@ -108,7 +108,7 @@ ul {
 
     textarea {
         height: auto;
-        min-height: 5 * $base-line-height;
+        min-height: 5 * $scalable-line-height;
     }
 
     .button,
@@ -142,6 +142,7 @@ ul {
     form .field label,
     form .field .label {
         font-family: $heading-font;
+        padding-top: .25 * $scalable-line-height;
     }
 
     form .field .explanation {
