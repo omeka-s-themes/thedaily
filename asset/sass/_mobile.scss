@@ -96,10 +96,14 @@ header {
     padding: $spacing-m $spacing-l;
 }
 
+header h1 {
+    margin-bottom: 0;
+}
+
 #top-nav>ul {
     display: block;
     overflow: scroll;
-    padding-bottom: $spacing-l;
+    padding-bottom: 4 * $spacing-l;
 }
 
 #top-nav ul ul ul li {
