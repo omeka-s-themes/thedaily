@@ -99,6 +99,7 @@ header {
 #top-nav>ul {
     display: block;
     overflow: scroll;
+    padding-bottom: $spacing-l;
 }
 
 #top-nav ul ul ul li {
