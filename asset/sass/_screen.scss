@@ -760,10 +760,7 @@ footer {
 }
 
 .value a.metadata-browse-link {
-    width: max-content;
-    padding: 0 $spacing-s;
-    margin-top: $spacing-s;
-    display: inline-block;
+    float: right;
 }
 
 .value.items img {
