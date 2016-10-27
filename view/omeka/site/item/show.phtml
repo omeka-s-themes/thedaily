@@ -20,6 +20,7 @@
 <div id="content" role="navigation">
     <?php echo $this->pageTitle($item->displayTitle(), 2); ?>
     <h3><?php echo $this->translate('Item'); ?></h3>
+    <?php $this->trigger('view.show.before'); ?>
     <?php if ($item->media()): ?>
     <div id="itemfiles" style="width: 100%; height: 50vh; background: #E0E0E0; margin:auto;"></div>
     <div id="itemfiles-nav" class="media-list">
