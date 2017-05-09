@@ -30,8 +30,8 @@ $this->trigger('view.layout');
             <?php endif; ?>
             <div id="search-container">
                 <form action="<?php echo $this->escapeHtml($this->url('site/resource', ['controller' => 'item','action' => 'browse'], true)); ?>" id="search-form" class="closed">
-                    <?php $searchValue = isset($_GET['property'][0]['in'][0]) ? $_GET['property'][0]['in'][0] : ''; ?>
-                    <input type="text" name="property[0][in][]" value="<?php echo $escape($searchValue); ?>">
+                    <?php $searchValue = isset($_GET['search']) ? $_GET['search'] : ''; ?>
+                    <input type="text" name="search" value="<?php echo $escape($searchValue); ?>" placeholder="<?php echo $this->translate('Search'); ?>">
                     <button type="submit"><?php echo $this->translate('Search'); ?></button>
                 </form>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
