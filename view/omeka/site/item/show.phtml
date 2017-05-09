@@ -41,4 +41,15 @@
     <?php endif; ?>
 </div>
 
+<?php
+$subjects = $item->subjectValues();
+$objects = $item->objectValues();
+if ($subjects || $objects):
+?>
+<div id="item-linked" class="section">
+    <h4><?php echo $this->translate('Linked Resources'); ?></h4>
+    <?php echo $item->displayLinkedResources(); ?>
+</div>
+<?php endif; ?>
+
 <?php $this->trigger('view.show.after'); ?>
