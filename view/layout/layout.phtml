@@ -8,7 +8,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+Black|Assistant:200,300,400');
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
-$this->headScript()->prependFile($this->assetUrl('js/jquery.js', 'Omeka'));
+$this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->trigger('view.layout');
 ?>
 <?php echo $this->doctype(); ?>
