@@ -1,7 +1,11 @@
-<?php $escape = $this->plugin('escapeHtml'); ?>
-<?php $this->htmlElement('body')->appendAttribute('class', 'item resource show'); ?>
-<?php $this->headScript()->prependFile($this->assetUrl('js/jquery.chocolat.min.js')); ?>
-<?php $this->headLink()->prependStylesheet($this->assetUrl('css/chocolat.css')); ?>
+<?php 
+$escape = $this->plugin('escapeHtml');
+$this->htmlElement('body')->appendAttribute('class', 'item resource show');
+$this->headScript()->prependFile($this->assetUrl('js/jquery.chocolat.min.js'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/chocolat.css'));
+$subjects = $item->subjectValues();
+$objects = $item->objectValues();
+?>
 <script>
     jQuery(document).ready(function(){
         var inContainer = jQuery("#itemfiles-nav").Chocolat({
@@ -40,5 +44,14 @@
     <?php endforeach; ?>
     <?php endif; ?>
 </div>
+
+<?php if ($subjects || $objects): ?>
+<div id="item-linked" class="property">
+    <h4><?php echo $this->translate('Linked Resources'); ?></h4>
+    <div class="value">
+        <?php echo $item->displayLinkedResources(); ?>
+    </div>
+</div>
+<?php endif; ?>
 
 <?php $this->trigger('view.show.after'); ?>
