@@ -689,24 +689,32 @@ footer {
     vertical-align: bottom;
 }
 
-#itemfiles .chocolat-overlay {
-    background-color: #000;
+.lSSlideOuter {
+    margin-bottom: $spacing-l;
 }
 
-#itemfiles-nav {
-    margin: $spacing-m 0 (2 * $spacing-l);
+#itemfiles,
+.media-render {
+    height: 70vh;
+    background-color: #222;
+}
+
+#itemfiles .media-render {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-#itemfiles-nav a {
-    height: (3 * $spacing-l);
-    display: inline-block;
-    margin: 0  $spacing-s $spacing-s 0;
+#itemfiles .media-render a {
+    text-align: center;
 }
 
-#itemfiles-nav img {
+#itemfiles .media-render img {
+    max-height: 100%;
+    width: auto;
+}
+
+#itemfiles .media-render iframe {
+    width: 100%;
     height: 100%;
 }
 
