@@ -15,7 +15,7 @@ $objects = $item->objectValues();
 <ul id="itemfiles" class="media-list">
     <?php foreach ($item->media() as $media): ?>
         <?php $source = ($media->originalUrl()) ? $media->originalUrl() : $media->source(); ?>
-        <li data-src="<?php echo $source; ?>" data-thumb="<?php echo $escape($media->thumbnailUrl('square')); ?>" class="media resource">
+        <li data-src="<?php echo $source; ?>" data-thumb="<?php echo $escape($media->thumbnailUrl('medium')); ?>" class="media resource">
             <?php echo $media->render(); ?>
         </li>
     <?php endforeach; ?>
@@ -48,14 +48,15 @@ $objects = $item->objectValues();
     jQuery(document).ready(function() {
       $('#itemfiles').lightSlider({
           mode: 'fade',
+          autoWidth: true,
           adaptiveHeight:false,
           gallery:true,
           item:1,
           loop:true,
-          thumbItem:9,
+          thumbItem:15,
           slideMargin:0,
           enableDrag: false,
-          currentPagerPosition:'center',
+          currentPagerPosition:'middle',
           onSliderLoad: function(el) {
               el.lightGallery({
                   selector: '#itemfiles .media',
