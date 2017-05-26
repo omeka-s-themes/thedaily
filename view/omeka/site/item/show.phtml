@@ -43,6 +43,7 @@ $objects = $item->objectValues();
 
 <?php $this->trigger('view.show.after'); ?>
 <script src="<?php echo $this->assetUrl('js/lg-video.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo $this->assetUrl('js/lg-zoom.js'); ?>" type="text/javascript"></script>
 
 <script>
     jQuery(document).ready(function() {
@@ -60,6 +61,8 @@ $objects = $item->objectValues();
           onSliderLoad: function(el) {
               el.lightGallery({
                   selector: '#itemfiles .media',
+                  download: false,
+                  zoom: true,
                   youtubePlayerParams: {
                       modestbranding: 1,
                       showinfo: 0,
