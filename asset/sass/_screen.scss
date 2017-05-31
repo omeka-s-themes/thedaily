@@ -817,8 +817,8 @@ footer {
 
 #advanced-search button.remove-value {
     text-indent: -9999px;
-    width: 1.75 * $spacing-l;
-    height: 1.75 * $spacing-l;
+    width: 1.5 * $scalable-line-height;
+    height: 1.5 * $scalable-line-height;
     position: relative;
     background-color: #000;
     color: #fff;
@@ -834,7 +834,8 @@ footer {
     text-align: center;
     padding: 0;
     width: 100%;
-    line-height: 1.5 * $base-line-height;
+    line-height: 1.25 * $scalable-line-height;
+    text-indent: 0;
 }
 
 .add-value.button {
