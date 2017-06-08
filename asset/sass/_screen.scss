@@ -1055,22 +1055,6 @@ footer {
     margin: $spacing-l 0;
 }
 
-.preview-block .description {
-    max-height: 6 * $base-line-height;
-    overflow: hidden;
-    position: relative;
-
-    &:after {
-        content: "";
-        position: absolute;
-        height: 2 * $base-line-height;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-image: linear-gradient(to bottom, transparent, #ffffff 100%);
-    }
-}
-
 .item-with-metadata .show.resource {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
