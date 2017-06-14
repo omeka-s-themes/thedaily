@@ -6,7 +6,6 @@ $this->headScript()->prependFile($this->assetUrl('js/lightgallery.min.js'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/lightgallery.min.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/lightslider.min.css'));
 $subjects = $item->subjectValues();
-$objects = $item->objectValues();
 $lightMedia = [];
 $otherMedia = [];
 ?>
@@ -61,7 +60,7 @@ $otherMedia = [];
 <div id="item-linked" class="property">
     <h4><?php echo $this->translate('Linked Resources'); ?></h4>
     <div class="value">
-        <?php echo $item->displayLinkedResources(); ?>
+        <?php echo $item->displayLinkedResources(['subjectValues' => $subjects, 'objectValues' => '']); ?>
     </div>
 </div>
 <?php endif; ?>
