@@ -6,8 +6,11 @@ $this->headScript()->prependFile($this->assetUrl('js/lightgallery.min.js'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/lightgallery.min.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/lightslider.min.css'));
 $subjects = $item->subjectValues();
+<<<<<<< HEAD
 $lightMedia = [];
 $otherMedia = [];
+=======
+>>>>>>> 9ab37abeb5ab309dc8c5f80d4085362c191e1992
 ?>
 <?php foreach ($item->media() as $media): ?>
     <?php $mediaType = $media->mediaType(); ?>

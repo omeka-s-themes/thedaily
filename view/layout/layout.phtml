@@ -29,11 +29,7 @@ $this->trigger('view.layout');
             <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
             <?php endif; ?>
             <div id="search-container">
-                <form action="<?php echo $this->escapeHtml($this->url('site/resource', ['controller' => 'item','action' => 'browse'], true)); ?>" id="search-form" class="closed">
-                    <?php $searchValue = isset($_GET['search']) ? $_GET['search'] : ''; ?>
-                    <input type="text" name="search" value="<?php echo $escape($searchValue); ?>" placeholder="<?php echo $this->translate('Search'); ?>">
-                    <button type="submit"><?php echo $this->translate('Search'); ?></button>
-                </form>
+                <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
             </div>
             <nav id="top-nav" class="closed">
