@@ -9,6 +9,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+Black|Assistant:200,300,400');
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$userBar = ($this->identity()) ? $this->partial('common/user-bar', ['site' => $site]) : '';
 $this->trigger('view.layout');
 ?>
 <?php echo $this->doctype(); ?>
@@ -22,6 +23,7 @@ $this->trigger('view.layout');
     </head>
 
     <?php echo $this->htmlElement('body'); ?>
+        <?php echo $userBar; ?>
         <header>
             <?php if ($this->themeSetting('logo')): ?>
             <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
