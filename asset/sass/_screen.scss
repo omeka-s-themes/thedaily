@@ -997,36 +997,30 @@ footer {
     }
 }
 
+.file {
+    max-width: 40%;
+}
+
 .right.file {
     float: right;
     margin: 0 0 $base-line-height $base-line-height;
-    max-width: 100%;
 }
 
 .left.file {
     float: left;
     margin: 0 $base-line-height $base-line-height 0;
+}
+
+.item-showcase .resource img,
+.file .resource img {
     max-width: 100%;
 }
 
-.item-showcase .resource,
-.file .resource {
-    display: flex;
-    flex-direction: column;
-    flex-basis: content;
-    width: min-content;
-    max-width: 100%;
-
-    img {
-        max-width: 100%;
-    }
-
-    & > a:first-child,
-    & .media-render > a:first-child {
-        width: max-content;
-        max-width: 100%;
-    }
+.item-showcase .resource + .resource,
+.file .resource + .resource {
+    margin-top: 2 * $spacing-l;
 }
+
 
 .item-showcase .resource h3,
 .file .resource h3 {
