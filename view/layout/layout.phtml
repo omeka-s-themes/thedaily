@@ -8,6 +8,7 @@ $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+Black|Assistant:200,300,400');
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
+$this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $userBar = $this->partial('common/user-bar', ['site' => $site]);
 $this->trigger('view.layout');
