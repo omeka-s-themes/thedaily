@@ -25,11 +25,7 @@
     <?php foreach ($items as $item): ?>
     <li class="item resource">
         <?php if ($primaryMedia = $item->primaryMedia()): ?>
-        <img
-            src="<?php echo $escape($primaryMedia->thumbnailUrl('medium')); ?>"
-            title="<?php echo $escape($primaryMedia->displayTitle()); ?>"
-            alt="<?php echo $escape($primaryMedia->mediaType()); ?> thumbnail"
-        >
+        <?php echo $item->linkRaw($this->thumbnail($primaryMedia, 'medium')); ?>
         <?php endif; ?>
         <h4><?php echo $item->link($item->displayTitle()); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>

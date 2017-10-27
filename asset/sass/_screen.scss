@@ -775,7 +775,7 @@ footer {
     padding: 0 $spacing-s;
 }
 
-.value a {
+.value a span {
     background-color: $primary-color;
 }
 
@@ -788,6 +788,7 @@ footer {
     width: auto;
     display: inline-block;
     vertical-align: middle;
+    margin-right: $spacing-s;
 }
 
 .value table {
