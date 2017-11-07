@@ -180,6 +180,25 @@ div#featured {
     text-align: left;
 }
 
+#linked-resources > h4 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+#linked-filter,
+.linked-header .pagination {
+    width: 100%;
+}
+
+#linked-filter h4 {
+    margin: 0 $spacing-s 0 0;
+}
+
+#linked-resources .linked-resource {
+    width: 100%;
+}
+
 /* @end */
 
 /* @group ----- Pages ----- */
