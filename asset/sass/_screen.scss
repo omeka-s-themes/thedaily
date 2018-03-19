@@ -273,14 +273,14 @@ nav li {
 }
 
 .pagination_previous a:before {
-    content: $fa-var-caret-left;
-    font-family: "FontAwesome";
+    content: "\f0d9";
+    font-family: "Font Awesome 5 Free";
     margin: 0 $spacing-s;
 }
 
 .pagination_next a:before {
-    content: $fa-var-caret-right;
-    font-family: "FontAwesome";
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
     margin: 0 $spacing-s;
 }
 
@@ -352,13 +352,13 @@ header nav .menu-toggle,
 }
 
 header nav .menu-toggle:before {
-    content: $fa-var-navicon;
-    font-family: "FontAwesome";
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
 }
 
 .search-toggle:before {
-    content: $fa-var-search;
-    font-family: "FontAwesome";
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
 }
 
 #search-form,
@@ -602,14 +602,14 @@ footer {
 }
 
 #sort-links .asc a:after {
-    content: $fa-var-caret-up;
-    font-family: "FontAwesome";
+    content: "\f0d8";
+    font-family: "Font Awesome 5 Free";
     margin-left: $spacing-s;
 }
 
 #sort-links .desc a:after {
-    content: $fa-var-caret-down;
-    font-family: "FontAwesome";
+    content: "f0d7";
+    font-family: "Font Awesome 5 Free";
     margin-left: $spacing-s;
 }
 
