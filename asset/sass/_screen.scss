@@ -1014,12 +1014,12 @@ footer {
 .site-page-pagination {
     background-color: #000;
     color: #ccc;
-    padding: $spacing-l;
+    padding: $spacing-m;
     margin-top: 2 * $spacing-l;
     margin-bottom: 2 * $spacing-l;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-family: $heading-font;
     clear: both;
 }
