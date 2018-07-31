@@ -5,17 +5,21 @@
 <?php endif; ?>
 
 <ul class="resource-list preview">
-<?php foreach ($this->items as $item): ?>
+<?php 
+$headingTerm = $this->siteSetting('browse_heading_property_term', 'dcterms:title');
+foreach ($this->resources as $resource):
+    $heading = $resource->value($headingTerm, ['default' => $this->translate('[Untitled]')]);
+?>
     <li class="item resource">
-    <?php if ($primaryMedia = $item->primaryMedia()): ?>
-        <img
-            src="<?php echo $this->escapeHtml($primaryMedia->thumbnailUrl('medium')); ?>"
-            title="<?php echo $this->escapeHtml($primaryMedia->displayTitle()); ?>"
-            alt="<?php echo $this->escapeHtml($primaryMedia->mediaType()); ?> thumbnail"
-        >
-    <?php endif; ?>
-        <h4><?php echo $item->link($item->displayTitle()); ?></h4>
-        <?php if ($date = $item->value('dcterms:date')): ?>
+        <?php if ($primaryMedia = $resource->primaryMedia()): ?>
+            <img
+                src="<?php echo $this->escapeHtml($primaryMedia->thumbnailUrl('medium')); ?>"
+                title="<?php echo $this->escapeHtml($primaryMedia->displayTitle()); ?>"
+                alt="<?php echo $this->escapeHtml($primaryMedia->mediaType()); ?> thumbnail"
+            >
+        <?php endif; ?>
+        <h4><?php echo $resource->link($heading); ?></h4>
+        <?php if ($date = $resource->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>
         <?php endif; ?>
     </li>
