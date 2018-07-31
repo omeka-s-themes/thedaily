@@ -10,7 +10,7 @@ $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
-$userBar = $this->partial('common/user-bar', ['site' => $site]);
+$userBar = $this->userBar();
 $this->trigger('view.layout');
 ?>
 <?php echo $this->doctype(); ?>
