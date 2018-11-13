@@ -1143,6 +1143,23 @@ footer {
     margin: 0 $spacing-l $spacing-l 0;
 }
 
+.list-of-sites .site-list {
+    .site {
+        margin-bottom: $spacing-m;
+    }
+
+    .site-link {
+        display: inline-block;
+        font-size: 1.25 * $scalable-font-size;
+        margin-bottom: $spacing-s;
+    }
+
+    .site-summary {
+        margin: 0 0 0 $spacing-m;
+        line-height: 1.2;
+    }
+}
+
 /* @end */
 
 /* @group ----- Containers ----- */
