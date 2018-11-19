@@ -576,41 +576,23 @@ footer {
     font-size: .75 * $scalable-font-size;
 }
 
-#sort-links {
-    font-family: $heading-font;
-    font-size: .75 * $scalable-font-size;
+.browse-controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 
-#sort-links ul {
-    list-style: none;
-    padding-left: 0;
-    display: inline-block;
-    margin: 0 0 $spacing-l;
-}
+.sorting {
+    select {
+        width: auto;
+    }
 
-#sort-links li {
-    list-style-type: none;
-    display: inline-block;
-    margin: 0 (.5 * $spacing-s);
-}
-
-#sort-links a {
-    background-color: $primary-color;
-    font-family: $heading-font;
-    color: #000;
-    padding: $spacing-s $spacing-m;
-}
-
-#sort-links .asc a:after {
-    content: "\f0d8";
-    font-family: "Font Awesome 5 Free";
-    margin-left: $spacing-s;
-}
-
-#sort-links .desc a:after {
-    content: "f0d7";
-    font-family: "Font Awesome 5 Free";
-    margin-left: $spacing-s;
+    button {
+        margin: 0;
+    }
 }
 
 .resource-list {
