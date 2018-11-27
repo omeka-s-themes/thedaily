@@ -52,8 +52,8 @@ $sortHeadings = [
 <ul class="resource-list">
     <?php foreach ($items as $item): ?>
     <li class="item resource">
-        <?php if ($primaryMedia = $item->primaryMedia()): ?>
-        <?php echo $item->linkRaw($this->thumbnail($primaryMedia, 'medium')); ?>
+        <?php if ($thumbnail = $this->thumbnail($item, 'medium')): ?>
+        <?php echo $item->linkRaw($thumbnail); ?>
         <?php endif; ?>
         <h4><?php echo $item->link($item->displayTitle()); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>
