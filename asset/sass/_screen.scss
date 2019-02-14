@@ -681,7 +681,7 @@ footer {
 
 #itemfiles,
 .lSSlideOuter .media-render {
-    height: 50vh;
+    max-height: 50vh;
     background-color: #222;
 }
 
@@ -696,7 +696,7 @@ footer {
 
 .lSSlideOuter #itemfiles .media-render img {
     max-height: 100%;
-    width: auto;
+    max-width:100%;
 }
 
 .lSSlideOuter #itemfiles .media-render iframe {
@@ -711,7 +711,7 @@ footer {
     align-items: center;
 }
 
-#content .lSSlideOuter .lSPager.lSGallery li.active, 
+#content .lSSlideOuter .lSPager.lSGallery li.active,
 #content .lSSlideOuter .lSPager.lSGallery li:hover {
     border-radius: 0;
 }
