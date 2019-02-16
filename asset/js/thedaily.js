@@ -8,6 +8,9 @@
             if ($('body').hasClass('menu-open')) {
                 $('body').removeClass('menu-open');
             }
+            if ($('body').hasClass('search-open')) {
+                $('input[name="search"]').focus()
+            }
             $('#query').focus();
         });
 
