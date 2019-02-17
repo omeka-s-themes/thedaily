@@ -28,7 +28,6 @@
 
         $('header').click(function(e){
             $target = $(e.target);
-            console.log($target)
             if ($target.is("header")) {
                 // close both
                 // close search
