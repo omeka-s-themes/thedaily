@@ -42,7 +42,7 @@
                     $('body').removeClass('menu-open');
                 }
             }
-            if ($target.is( ".navigation" )) {
+            if ($target.is( "#top-nav ul, #top-nav li" )) {
                 // close navigation
                 if ($('body').hasClass('menu-open')) {
                     $('#top-nav').toggleClass('open').toggleClass('closed');
