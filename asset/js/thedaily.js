@@ -8,7 +8,7 @@
             if ($('body').hasClass('menu-open')) {
                 $('body').removeClass('menu-open');
             }
-            $('#query').focus();
+            $('input[name="search"]').focus()
         });
 
         $('.menu-toggle').click(function() {
