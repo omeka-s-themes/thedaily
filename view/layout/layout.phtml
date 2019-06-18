@@ -1,9 +1,11 @@
 <?php
 $escape = $this->plugin('escapeHtml');
+$siteTitle = $site->title();
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
-$this->headTitle($this->setting('installation_title', 'Omeka S'))->setSeparator(' · ');
+$this->headTitle($siteTitle)->setSeparator(' · ');
+$this->headTitle()->append($this->setting('installation_title', 'Omeka S'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+Black|Assistant:200,300,400');
@@ -26,11 +28,15 @@ $this->trigger('view.layout');
     <?php echo $this->htmlElement('body'); ?>
         <?php echo $userBar; ?>
         <header>
-            <?php if ($this->themeSetting('logo')): ?>
-            <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
-            <?php else: ?>
-            <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
-            <?php endif; ?>
+            <h1>
+                <a href="<?php echo $site->url(); ?>" class="site-title">
+                <?php if ($this->themeSetting('logo')): ?>
+                    <img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" alt="<?php echo $escape($siteTitle); ?>" />
+                <?php else: ?>
+                    <?php echo $escape($siteTitle); ?>
+                <?php endif; ?>
+                </a>
+            </h1>
             <div id="search-container">
                 <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
