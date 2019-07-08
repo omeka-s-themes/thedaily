@@ -1,32 +1,32 @@
 /* @group ----- Generic HTML Elements ----- */
 
 html {
-    font-size: 1.5 * $scalable-font-size;
-    line-height: 1.5 * $scalable-line-height;
+    font-size: 1.5 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
 }
 
 h1 {
-    font-size: 2.25 * $scalable-font-size;
-    line-height: 2 * $scalable-line-height;
+    font-size: 2.25 * $mobile-font-size;
+    line-height: 2 * $mobile-line-height;
     margin: 0 0 $spacing-l;
 }
 
 h2 {
-    font-size: 2 * $scalable-font-size;
-    line-height: 2 * $scalable-line-height;
+    font-size: 2 * $mobile-font-size;
+    line-height: 2 * $mobile-line-height;
     margin: $spacing-l 0;
 }
 
 h3 {
-    font-size: 1.75 * $scalable-font-size;
-    line-height: 1.5 * $scalable-line-height;
+    font-size: 1.75 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
     margin: $spacing-l 0;
 }
 
 h4 {
     margin: $spacing-l 0;
-    font-size: 1.5 * $scalable-font-size;
-    line-height: 1.5 * $scalable-line-height;
+    font-size: 1.5 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
 }
 
     /* @group ----- Form elements ----- */
@@ -37,8 +37,8 @@ h4 {
     button,
     .button,
     select {
-        font-size: 1.5 * $scalable-font-size;
-        line-height: 1.5 * $scalable-line-height;
+        font-size: $mobile-font-size;
+        line-height: $mobile-line-height;
         margin: 0;
         height: auto;
     }
@@ -61,8 +61,8 @@ h4 {
     }
 
     .add-value.button {
-        font-size: 1.5 * $scalable-font-size;
-        line-height: 1.5 * $scalable-line-height;
+        font-size: 1.5 * $mobile-font-size;
+        line-height: 1.5 * $mobile-line-height;
         height: auto;
     }
 
@@ -84,7 +84,7 @@ h4 {
 .pagination,
 .pagination input[type="text"],
 .item-pagination {
-    font-size: $scalable-font-size;
+    font-size: $mobile-font-size;
 }
 
 
@@ -107,8 +107,8 @@ header h1 {
 }
 
 #top-nav ul ul ul li {
-    font-size: $scalable-font-size;
-    line-height: $scalable-line-height;
+    font-size: $mobile-font-size;
+    line-height: $mobile-line-height;
 }
 
 #top-nav>ul>li {
@@ -147,26 +147,39 @@ div#featured {
 
 .browse #outputs,
 #sort-links {
-    font-size: $scalable-font-size;
+    font-size: $mobile-font-size;
 }
 
 .records .hentry {
-    font-size: 1.5 * $scalable-font-size;
-    line-height: 1.5 * $scalable-line-height;
+    font-size: 1.5 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
     width: calc(50% - #{$spacing-l});
 }
 
 .collection.hentry h2 {
-    font-size: 1.5 * $scalable-font-size;
-    line-height: 1.5 * $scalable-line-height;
+    font-size: 1.5 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
 }
 
 .resource-list .resource {
-    font-size: $scalable-font-size;
-    line-height: $scalable-line-height;
+    font-size: $mobile-font-size;
+    line-height: $mobile-line-height;
     width: calc(50% - #{$spacing-l});
 }
 
+.browse-controls {
+    flex-direction: row;
+}
+
+.advanced-search {
+    margin-bottom: $spacing-m;
+    font-size: $mobile-font-size;
+}
+
+.pagination {
+    margin: $spacing-m 0;
+    padding: 0;
+}
 
 /* @end */
 
@@ -175,7 +188,7 @@ div#featured {
 .property h4,
 .property .value,
 .item-with-metadata .media-list {
-    font-size: 1.5 * $scalable-font-size;
+    font-size: 1.5 * $mobile-font-size;
     width: 100%;
     text-align: left;
 }

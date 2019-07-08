@@ -6,8 +6,8 @@
 
 html {
     font-family: $body-font;
-    font-size: $scalable-font-size;
-    line-height: $scalable-line-height;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -23,20 +23,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.75 * $scalable-font-size;
-    line-height: 2 * $scalable-line-height;
+    font-size: 1.75 * $base-font-size;
+    line-height: 2 * $base-line-height;
     margin: 0 0 $spacing-l;
 }
 
 h2 {
-    font-size: 1.5 * $scalable-font-size;
-    line-height: 2 * $scalable-line-height;
+    font-size: 1.5 * $base-font-size;
+    line-height: 2 * $base-line-height;
     margin: $spacing-l 0;
 }
 
 h3 {
-    font-size: 1.25 * $scalable-font-size;
-    line-height: $scalable-line-height;
+    font-size: 1.25 * $base-font-size;
+    line-height: $base-line-height;
     margin: $spacing-l 0;
 }
 
@@ -71,22 +71,23 @@ ul {
     button,
     select {
         font-family: $body-font;
-        font-size: $scalable-font-size;
-        line-height: $scalable-line-height;
+        font-size: $base-font-size;
+      line-height: $base-line-height;
+        height: 1.5 * $base-line-height;
         margin: 0;
         border-radius: 0;
     }
 
     select {
         width: 100%;
-        height: 1.5 * $scalable-line-height;
+        height: 1.5 * $base-line-height;
         appearance: none;
         padding: $spacing-s (1.25 * $spacing-l) $spacing-s $spacing-m;
         font-family: $body-font;
         border: 1px solid #ccc;
         border-radius: 3px;
         background: #fff url('../img/select-arrow.svg') right $spacing-m center no-repeat;
-        background-size: .5 * $scalable-font-size;
+        background-size: .5 * $base-font-size;
     }
 
     input[type="text"],
@@ -97,7 +98,7 @@ ul {
     input[type="date"],
     input[type="datetime-local"],
     textarea {
-        height: 1.5 * $scalable-line-height;
+        height: 1.5 * $base-line-height;
         width: 100%;
         appearance: none;
         border: 1px solid #ccc;
@@ -108,17 +109,19 @@ ul {
 
     textarea {
         height: auto;
-        min-height: 5 * $scalable-line-height;
+        min-height: 5 * $base-line-height;
     }
 
     .button,
     button,
     input[type="submit"] {
         appearance: none;
-        padding: $spacing-s $spacing-m;
+        padding: 0 $spacing-m;
         background-color: $primary-color;
         border: 3px solid #000;
         font-family: $heading-font;
+        font-size: $base-font-size;
+        line-height: 1.25 * $base-line-height;
         cursor: pointer;
     }
 
@@ -142,7 +145,7 @@ ul {
     form .field label,
     form .field .label {
         font-family: $heading-font;
-        padding-top: .25 * $scalable-line-height;
+        padding-top: .25 * $base-line-height;
     }
 
     form .field .explanation {
@@ -176,9 +179,9 @@ ul {
 
     .collapsible {
         font-weight: normal;
-        font-size: .75 * $scalable-font-size;
+        font-size: .75 * $base-font-size;
         font-family: $body-font;
-        line-height: .75 * $scalable-line-height;
+        line-height: .75 * $base-line-height;
     }
 
     /* @end */
@@ -236,11 +239,11 @@ nav li {
     font-family: $heading-font;
     color: #000;
     padding: $spacing-s $spacing-m;
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
 }
 
 .pagination {
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
     font-family: $heading-font;
     margin: 0;
     padding: .25 * $base-line-height;
@@ -293,7 +296,7 @@ nav li {
     flex-wrap: wrap;
     justify-content: space-between;
     font-family: $heading-font;
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
 }
 
 .item-pagination a {
@@ -420,8 +423,8 @@ header nav > ul {
 }
 
 #top-nav ul ul ul li {
-    font-size: .75 * $scalable-font-size;
-    line-height: .75 * $scalable-line-height;
+    font-size: .75 * $base-font-size;
+    line-height: .75 * $base-line-height;
 
     &:before {
         content: "\2014";
@@ -445,8 +448,8 @@ header nav > ul {
     display: inline-block;
     width: 50%;
     margin-right: $spacing-m;
-    font-size: 2 * $scalable-font-size;
-    height: 2 * $scalable-line-height;
+    font-size: 2 * $base-font-size;
+    height: 2 * $base-line-height;
     padding: 0;
 }
 
@@ -460,8 +463,8 @@ header nav > ul {
     color: #fff;
     display: inline-block;
     cursor: pointer;
-    font-size: 2 * $scalable-font-size;
-    height: 2 * $scalable-line-height;
+    font-size: 2 * $base-font-size;
+    height: 2 * $base-line-height;
     padding-left: $spacing-s;
     padding-right: $spacing-s;
     margin: 0;
@@ -575,8 +578,10 @@ footer {
     background-color: $primary-color;
     font-family: $heading-font;
     color: #000;
-    padding: $spacing-s $spacing-m;
-    font-size: .75 * $scalable-font-size;
+    padding: 0 $spacing-m;
+    border: 3px solid #000;
+    height: 1.5 * $base-line-height;
+    line-height: 1.25 * $base-line-height;
 }
 
 .browse-controls {
@@ -620,8 +625,8 @@ footer {
 }
 
 .resource-list .resource {
-    font-size: .75 * $scalable-font-size;
-    line-height: .75 * $scalable-line-height;
+    font-size: .75 * $base-font-size;
+    line-height: .75 * $base-line-height;
     width: calc(25% - #{$spacing-l});
     margin: 0 $spacing-l (2 * $spacing-l) 0;
     list-style-type: none;
@@ -642,7 +647,7 @@ footer {
 
 .browse #outputs {
     width: 100%;
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
 }
 
 .browse .outputs-label:after {
@@ -654,9 +659,9 @@ footer {
 }
 
 .collection.hentry h2 {
-    font-size: $scalable-font-size;
-    line-height: $scalable-line-height;
-    margin: (.5 * $scalable-font-size) 0 0;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin: (.5 * $base-font-size) 0 0;
 }
 
 /* @end */
@@ -726,7 +731,7 @@ footer {
 }
 
 .property h4 {
-    font-size: $scalable-font-size;
+    font-size: $base-font-size;
     width: 25%;
     margin: 0;
     display: block;
@@ -893,8 +898,8 @@ footer {
 
 #advanced-search button.remove-value {
     text-indent: -9999px;
-    width: 1.5 * $scalable-line-height;
-    height: 1.5 * $scalable-line-height;
+    width: 1.5 * $base-line-height;
+    height: 1.5 * $base-line-height;
     position: relative;
     background-color: #000;
     color: #fff;
@@ -910,13 +915,13 @@ footer {
     text-align: center;
     padding: 0;
     width: 100%;
-    line-height: 1.25 * $scalable-line-height;
+    line-height: 1.25 * $base-line-height;
     text-indent: 0;
 }
 
 .add-value.button {
     margin-top: .5 * $base-line-height;
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
     display: inline-block;
 }
 
@@ -930,7 +935,7 @@ footer {
     padding: ($spacing-s - 3px) 0 ($spacing-s - 1px);
     width: 100%;
     margin-bottom: $spacing-l;
-    font-size: .75 * $scalable-font-size;
+    font-size: .75 * $base-font-size;
     display: flex;
     flex-wrap: wrap;
 }
@@ -1079,8 +1084,8 @@ footer {
 
 .item-showcase .resource h3,
 .file .resource h3 {
-    font-size: $scalable-font-size;
-    margin: (.5 * $scalable-line-height) 0 0;
+    font-size: $base-font-size;
+    margin: (.5 * $base-line-height) 0 0;
 }
 
 .lSSlideOuter .media-render {
@@ -1135,7 +1140,7 @@ footer {
 
     .site-link {
         display: inline-block;
-        font-size: 1.25 * $scalable-font-size;
+        font-size: 1.25 * $base-font-size;
         margin-bottom: $spacing-s;
     }
 
