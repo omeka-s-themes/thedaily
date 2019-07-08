@@ -313,10 +313,13 @@ nav li {
     display: none;
 }
 
+header > h1 {
+    margin: 0 auto 0 0;
+}
+
 .site-title {
     font-family: $heading-font;
     padding: $spacing-s 0;
-    margin-right: auto;
 }
 
 .site-title img {
