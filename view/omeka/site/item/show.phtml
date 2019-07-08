@@ -9,6 +9,10 @@ $lightMedia = [];
 $otherMedia = [];
 $sortedSubjects = [];
 $subjectValues = $item->subjectValues();
+if ($subjectValues) {
+    $this->headScript()->prependFile($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.jquery.js', 'Omeka'));
+    $this->headLink()->prependStylesheet($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.css', 'Omeka'));
+}
 ?>
 <?php foreach ($item->media() as $media): ?>
     <?php $mediaType = $media->mediaType(); ?>
@@ -75,7 +79,7 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 
 <script>
     jQuery(document).ready(function() {
-      $('#itemfiles').lightSlider({
+      jQuery('#itemfiles').lightSlider({
           mode: 'fade',
           autoWidth: true,
           adaptiveHeight:false,
@@ -105,5 +109,8 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
               });
           }   
       });  
+      <?php if ($subjectValues): ?>
+      jQuery(document).trigger('enhance.tablesaw');
+      <?php endif; ?>
     });
 </script>

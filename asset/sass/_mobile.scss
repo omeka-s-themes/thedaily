@@ -212,6 +212,19 @@ div#featured {
     width: 100%;
 }
 
+#linked-resources tr > td:first-child {
+    background-color: #000;
+    color: #fff;
+}
+
+#linked-resources td {
+    border-bottom: 1px solid #000;
+}
+
+#linked-resources .resource-link {
+    padding: 0 $spacing-s;
+}
+
 /* @end */
 
 /* @group ----- Pages ----- */
