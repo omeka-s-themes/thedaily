@@ -23,6 +23,34 @@ $this->trigger('view.layout');
         <?php echo $this->headLink(); ?>
         <?php echo $this->headStyle(); ?>
         <?php echo $this->headScript(); ?>
+
+        <style>
+            <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
+            #top-nav > ul > li > a,
+            #featured .record a,
+            .site-page-pagination a,
+            #top-nav > ul > li > a,
+            #featured .record a,
+            .site-page-pagination a {
+                color: <?php echo $accentColor; ?>
+            }
+            
+            p a,
+            span a,
+            .button,
+            button,
+            input[type="submit"],
+            .secondary-nav li a,
+            .pagination a.button,
+            .item-pagination a,
+            #featured .featured-meta h3,
+            .advanced-search,
+            .value a span,
+            .sub-menu {
+                background-color: <?php echo $accentColor; ?>;
+            }
+            <?php endif; ?>
+        </style>
     </head>
 
     <?php echo $this->htmlElement('body'); ?>
