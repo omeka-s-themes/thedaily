@@ -1019,72 +1019,24 @@ footer {
     display: inline-block;
 }
 
-.caption {
+.page .item.resource .caption {
     font-size: .875 * $base-font-size;
     line-height: .875 * $base-line-height;
 }
 
-.caption > *:first-child {
-    margin-top: 0;
-}
-
-.caption > *:last-child {
-    margin-bottom: 0;
-}
-
-.break {
-    width: 100%;
-    clear: both;
-    height: 1px;
-    margin-bottom: -1px;
-}
-
-.break.opaque {
-    background-color: #000;
-}
-
-.item-showcase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    padding: ($spacing-l - 1px) 0 0;
-    margin: $spacing-l 0;
-
-    .item.resource {
-        margin-bottom: $spacing-l;
-    }
-}
-
-.file {
-    max-width: 40%;
-}
-
-.right.file {
-    float: right;
-    margin: 0 0 $base-line-height $base-line-height;
-}
-
-.left.file {
-    float: left;
-    margin: 0 $base-line-height $base-line-height 0;
-}
-
-.item-showcase .resource img,
-.file .resource img {
-    max-width: 100%;
-}
-
-.file .resource + .resource {
-    margin-top: 2 * $spacing-l;
-}
-
-
-.item-showcase .resource h3,
-.file .resource h3 {
+.page .item-showcase .resource.item:not(:only-child) h3,
+.page .file .resource h3 {
     font-size: $base-font-size;
     margin: (.5 * $base-line-height) 0 0;
+}
+
+.page .break.opaque {
+    border-bottom-color: #000;
+}
+
+.page .item-showcase {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .lSSlideOuter .media-render {
@@ -1105,11 +1057,7 @@ footer {
     text-align: center;
 }
 
-.preview-block {
-    margin: $spacing-l 0;
-}
-
-.item-with-metadata .show.resource {
+.page .item-with-metadata .show.resource {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     padding: ($spacing-l - 1px) 0;
@@ -1117,7 +1065,7 @@ footer {
     overflow: hidden;
 }
 
-.item-with-metadata .media-list {
+.page .item-with-metadata .media-list {
     display: flex;
     width: calc(75% - #{$spacing-l});
     height: auto;
@@ -1128,25 +1076,8 @@ footer {
     align-items: center;
 }
 
-.item-with-metadata .media-list img {
+.page .item-with-metadata .media-list img {
     margin: 0 $spacing-l $spacing-l 0;
-}
-
-.list-of-sites .site-list {
-    .site {
-        margin-bottom: $spacing-m;
-    }
-
-    .site-link {
-        display: inline-block;
-        font-size: 1.25 * $base-font-size;
-        margin-bottom: $spacing-s;
-    }
-
-    .site-summary {
-        margin: 0 0 0 $spacing-m;
-        line-height: 1.2;
-    }
 }
 
 /* @end */
