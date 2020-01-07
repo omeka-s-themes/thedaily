@@ -30,7 +30,7 @@ foreach ($this->resources as $resource):
 $linkText = $this->linkText == '' ? $this->translate('Browse all') : $this->linkText;
 echo $this->hyperlink($linkText, $this->url(
     'site/resource', ['controller' => 'item', 'action' => 'browse'], ['query' => $this->query], true
-));
+), ['class' => 'button']);
 ?>
 
 </div>
