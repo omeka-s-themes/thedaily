@@ -9,6 +9,7 @@ $lightMedia = [];
 $otherMedia = [];
 $sortedSubjects = [];
 $subjectValues = $item->subjectValues();
+$whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml'];
 if ($subjectValues) {
     $this->headScript()->prependFile($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.jquery.js', 'Omeka'));
     $this->headLink()->prependStylesheet($this->assetUrl('vendor/tablesaw/tablesaw.stackonly.css', 'Omeka'));
@@ -17,7 +18,7 @@ if ($subjectValues) {
 <?php foreach ($item->media() as $media): ?>
     <?php $mediaType = $media->mediaType(); ?>
     <?php $mediaRenderer = $media->renderer(); ?>
-    <?php if ((strpos($mediaType, 'image') !== false) || (strpos($mediaRenderer, 'youtube') !== false)): ?>
+    <?php if (in_array($mediaType, $whitelist) || (strpos($mediaRenderer, 'youtube') !== false)): ?>
         <?php $lightMedia[] = $media; ?>
     <?php else: ?>
         <?php $otherMedia[] = $media; ?>
