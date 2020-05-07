@@ -49,7 +49,7 @@ $pagination->setFragment($fragment);
         </td>
         <td>
         <?php if ($value->resource()->resourceClass()): ?>
-        <span class="resource-class"><?php echo $this->escapeHtml($value->resource()->resourceClass()->label()); ?></span>
+        <span class="resource-class"><?php echo $this->escapeHtml($translate($value->resource()->resourceClass()->label())); ?></span>
         <?php endif; ?>
         </td>
     </tr>
