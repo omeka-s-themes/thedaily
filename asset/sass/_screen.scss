@@ -1086,6 +1086,22 @@ footer {
 
 /* @end */
 
+/* @group ----- Search ----- */
+
+.index.search .results ul {
+  list-style: none;
+  padding-left: 0;
+  columns: 2;
+  
+  li {
+    margin-bottom: $spacing-s;
+    padding-bottom: $spacing-s;
+    border-bottom: 1px solid #000;
+  }
+}
+
+/* @end */
+
 /* @group ----- Containers ----- */
 
 body.search-open,
