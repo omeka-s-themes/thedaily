@@ -313,7 +313,20 @@ nav li {
 }
 
 #skipnav {
-    display: none;
+  position: fixed;
+  top: $spacing-l;
+  left: 50%;
+  border: 1px solid #000;
+  transform: translateX(-50%);
+  z-index: -5;
+  padding: $spacing-s;
+  background-color: #fff;
+  opacity: 0;
+  
+  &:focus {
+    z-index: 1000;
+    opacity: 1;
+  }
 }
 
 header > h1 {
