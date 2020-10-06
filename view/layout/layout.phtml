@@ -31,7 +31,8 @@ $this->trigger('view.layout');
             .site-page-pagination a,
             #top-nav > ul > li > a,
             #featured .record a,
-            .site-page-pagination a {
+            .site-page-pagination a,
+            .results .result-title a {
                 color: <?php echo $accentColor; ?>
             }
             
@@ -46,7 +47,9 @@ $this->trigger('view.layout');
             #featured .featured-meta h3,
             .advanced-search,
             .value a span,
-            .sub-menu {
+            .sub-menu,
+            .results li a,
+            .results > ul + a {
                 background-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>

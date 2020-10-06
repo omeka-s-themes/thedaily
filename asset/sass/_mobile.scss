@@ -121,6 +121,7 @@ header h1 {
 
 footer {
     padding: 0 $spacing-l $spacing-l;
+    clear: both;
 }
 
 /* @end */
@@ -244,6 +245,25 @@ div#featured {
 /* @end */
 
 /* @group ----- Search ----- */
+
+.results > ul {
+  display: block;
+  
+  & > li {
+    width: auto;
+  }
+}
+
+.sitewide-search-form ~ h2,
+.sitewide-search-form ~ .pagination {
+  float: none;
+  text-align: left;
+  width: 100%;
+}
+
+.sitewide-search-form ~ .pagination {
+  margin: (-1 * $spacing-m) 0 (1.5 * $spacing-l);
+}
 
 .index.search .results ul {
   columns: 1;
