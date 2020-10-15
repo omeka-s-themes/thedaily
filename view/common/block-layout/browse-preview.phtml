@@ -5,21 +5,24 @@
 <?php endif; ?>
 
 <ul class="resource-list preview">
-<?php 
+<?php
 $headingTerm = $this->siteSetting('browse_heading_property_term', 'dcterms:title');
 foreach ($this->resources as $resource):
     $heading = $resource->value($headingTerm, ['default' => $this->translate('[Untitled]')]);
 ?>
     <li class="item resource">
-        <?php if ($primaryMedia = $resource->primaryMedia()): ?>
+        <?php if (in_array('thumbnail', $this->components) && $primaryMedia = $resource->primaryMedia()): ?>
             <img
                 src="<?php echo $this->escapeHtml($primaryMedia->thumbnailUrl('medium')); ?>"
                 title="<?php echo $this->escapeHtml($primaryMedia->displayTitle()); ?>"
                 alt="<?php echo $this->escapeHtml($primaryMedia->mediaType()); ?> thumbnail"
             >
         <?php endif; ?>
-        <h4><?php echo $resource->link($heading); ?></h4>
-        <?php if ($date = $resource->value('dcterms:date')): ?>
+        <h4><?php
+        if (in_array('resource-heading', $this->components)):
+            echo $resource->link($heading);
+        endif;?></h4>
+        <?php if (in_array('resource-body', $this->components) && $date = $resource->value('dcterms:date')): ?>
         <div class="date"><?php echo $date; ?></div>
         <?php endif; ?>
     </li>
