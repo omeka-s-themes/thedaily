@@ -80,11 +80,15 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 
 <script>
     jQuery(document).ready(function() {
+      
+      var galleryState = ($('#itemfiles li').length > 1) ? true : false;
+      
       jQuery('#itemfiles').lightSlider({
           mode: 'fade',
           autoWidth: true,
           adaptiveHeight:false,
-          gallery:true,
+          gallery: galleryState,
+          pager: galleryState,
           item:1,
           loop:true,
           thumbItem:15,
