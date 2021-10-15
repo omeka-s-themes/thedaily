@@ -79,7 +79,6 @@ ul {
     }
 
     select {
-        width: 100%;
         height: 1.5 * $base-line-height;
         appearance: none;
         padding: $spacing-s (1.25 * $spacing-l) $spacing-s $spacing-m;
@@ -99,7 +98,6 @@ ul {
     input[type="datetime-local"],
     textarea {
         height: 1.5 * $base-line-height;
-        width: 100%;
         appearance: none;
         border: 1px solid #ccc;
         background-color: #fff;
@@ -145,10 +143,10 @@ ul {
     form .field label,
     form .field .label {
         font-family: $heading-font;
-        padding-top: .25 * $base-line-height;
     }
 
-    form .field .explanation {
+    form .field .explanation,
+    form .field .field-description {
         margin-bottom: $spacing-s;
     }
 
@@ -757,7 +755,6 @@ footer {
     width: calc(75% - #{$spacing-l});
     height: auto;
     text-align: left;
-    float: right;
 }
 
 .value:not(:first-of-type) {
@@ -885,7 +882,6 @@ footer {
 
 #advanced-search .value {
     display: flex;
-    justify-content: space-between;
     margin-bottom: $spacing-m;
 }
 
@@ -893,46 +889,24 @@ footer {
     margin-top: $spacing-m;
 }
 
-#advanced-search #property-queries .value:only-of-type > select,
-#advanced-search #property-queries .value:only-of-type > input[type="text"] {
-    width: 33%;
-}
-
-#advanced-search #property-queries .value > select,
-#advanced-search #property-queries .value > input[type="text"] {
-    width: calc((100% - #{2.5 * $spacing-l}) / 3);
-}
-
-#advanced-search #has-property-queries .value:not(:only-of-type) > select,
-#advanced-search #has-property-queries .value:not(:only-of-type) > input[type="text"] {
-    width: calc((100% - #{2.5 * $spacing-l}) / 2);
-}
-
 #advanced-search button.remove-value {
-    text-indent: -9999px;
     width: 1.5 * $base-line-height;
     height: 1.5 * $base-line-height;
     position: relative;
     background-color: #000;
     color: #fff;
     margin-left: .25 * $base-line-height;
+    padding: 0 $spacing-s;
 }
 
 #advanced-search button.remove-value:before {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     padding: 0;
     width: 100%;
-    line-height: 1.25 * $base-line-height;
     text-indent: 0;
 }
 
 .add-value.button {
-    margin-top: .5 * $base-line-height;
     font-size: .75 * $base-font-size;
     display: inline-block;
 }
