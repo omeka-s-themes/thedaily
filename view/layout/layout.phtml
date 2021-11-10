@@ -12,6 +12,10 @@ $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Archivo+
 $this->headScript()->prependFile($this->assetUrl('js/thedaily.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+$banner = $this->themeSettingAssetUrl('banner');
+$bannerHeight = $this->themeSetting('banner_height');
+$bannerHeightMobile = $this->themeSetting('banner_height_mobile');
+$bannerPosition = ($this->themeSetting('banner_position')) ? str_replace('_','-', $this->themeSetting('banner_position')) : 'center';
 $userBar = $this->userBar();
 $this->trigger('view.layout');
 ?>
@@ -53,6 +57,17 @@ $this->trigger('view.layout');
                 background-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>
+            .banner {
+                height: <?php echo ($bannerHeight !== '') ? $bannerHeight: 'auto'  ?>;
+                align-items: <?php echo $bannerPosition; ?>;
+            }
+            <?php if ($bannerHeightMobile !== ''): ?>
+                @media screen and (max-width:640px) {
+                    .banner {
+                        height: <?php echo $bannerHeightMobile; ?>;
+                    }
+                }
+            <?php endif; ?>
         </style>
     </head>
 
@@ -82,6 +97,11 @@ $this->trigger('view.layout');
             ?>
             </nav>
         </header>
+        <?php if ($banner): ?>
+        <div class="banner">
+            <img src="<?php echo $this->themeSettingAssetUrl('banner'); ?>" title="Banner">
+        </div>
+        <?php endif; ?>
         <div id="content" role="main">
             <?php echo $this->content; ?>
         </div>

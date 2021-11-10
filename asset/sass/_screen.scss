@@ -481,6 +481,21 @@ header nav > ul {
     line-height: 0;
 }
 
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &.contained {
+      @include container;
+    }
+}
+
+.banner img {
+    width: 100%;
+}
+
 /* @end */
 
 /* @group ----- Home ----- */
@@ -501,7 +516,7 @@ div#featured {
 #featured .record:first-child,
 #featured.layout-2 .record:nth-child(2),
 #featured .record:nth-child(6n),
-#featured .record:nth-child(6n+1), {
+#featured .record:nth-child(6n+1) {
     width: 100%;
 }
 
@@ -1156,7 +1171,7 @@ footer {
 
 .sitewide-search-form ~ .advanced-search {
   margin-top: $spacing-s;
-  display: inline-block;
+  display: block;
   float: left;
 }
 
