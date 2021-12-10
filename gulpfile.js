@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 
 gulp.task('css', function () {
-    var sass = require('gulp-sass');
+    var sass = require('gulp-sass')(require('sass'));
     var postcss = require('gulp-postcss');
     var autoprefixer = require('autoprefixer');
 

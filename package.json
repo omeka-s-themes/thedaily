@@ -24,7 +24,7 @@
     "autoprefixer": "^9.2.1",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "susy": "^2.2.12"
   },
   "browserslist": [
