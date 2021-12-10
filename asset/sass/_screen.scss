@@ -752,20 +752,19 @@ footer {
 .property {
     margin-bottom: $spacing-l;
     vertical-align: top;
+    display: flex;
     overflow: hidden;
 }
 
 .property h4 {
     font-size: $base-font-size;
     width: 25%;
-    margin: 0;
-    display: block;
+    margin: 0 $spacing-l 0 0;
     text-align: right;
-    float: left;
     word-break: break-word;
 }
 
-.value {
+.values {
     display: block;
     width: calc(75% - #{$spacing-l});
     height: auto;
