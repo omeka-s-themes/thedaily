@@ -52,8 +52,14 @@ $this->trigger('view.layout');
             .advanced-search,
             .value a span,
             .sub-menu,
-            .results li a,
-            .results > ul + a {
+            .results .result-title a,
+            .results .resource-link .resource-name,
+            .results > a,
+            .results > ul + a,
+            .results li > a,
+            .breadcrumbs a,
+            #content .resource a,
+            .property a {
                 background-color: <?php echo $accentColor; ?>;
             }
             <?php endif; ?>

@@ -49,6 +49,10 @@ a {
     color: #000;
 }
 
+a img {
+    vertical-align: bottom;
+}
+
 p a,
 span a {
     background-color: $primary-color;
@@ -238,6 +242,10 @@ nav li {
     color: #000;
     padding: $spacing-s $spacing-m;
     font-size: .75 * $base-font-size;
+}
+
+.breadcrumbs a {
+    background-color: $primary-color;
 }
 
 .pagination {
@@ -659,6 +667,10 @@ footer {
     &:nth-child(4n) {
         margin-right: 0;
     }
+
+    a {
+        background-color: $primary-color;
+    }
 }
 
 .resource-list .resource img {
@@ -668,6 +680,10 @@ footer {
 
 .resource-list .date {
     display: block;
+}
+
+#content .resource a {
+    background-color: $primary-color;
 }
 
 .browse #outputs {
@@ -754,6 +770,10 @@ footer {
     vertical-align: top;
     display: flex;
     overflow: hidden;
+}
+
+.property a {
+    background-color: $primary-color;
 }
 
 .property h4 {
@@ -1014,6 +1034,10 @@ footer {
     vertical-align: top;
 }
 
+#content #itemfiles a {
+    background-color: transparent;
+}
+
 .media.show .media-render {
     margin-bottom: $spacing-l;
     text-align: center;
@@ -1134,6 +1158,14 @@ footer {
     color: $primary-color;
     background-color: transparent;
   }
+}
+
+.results .resource-link {
+    background-color: transparent;
+
+    .resource-name {
+        background-color: $primary-color;
+    }
 }
 
 .results li a {
