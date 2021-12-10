@@ -285,11 +285,13 @@ nav li {
     content: "\f0d9";
     font-family: "Font Awesome 5 Free";
     margin: 0 $spacing-s;
+    font-weight: 900;
 }
 
 .pagination_next a:before {
     content: "\f0da";
     font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     margin: 0 $spacing-s;
 }
 
@@ -378,11 +380,13 @@ header nav .menu-toggle,
 header nav .menu-toggle:before {
     content: "\f0c9";
     font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 
 .search-toggle:before {
     content: "\f002";
     font-family: "Font Awesome 5 Free";
+    font-weight: 900;
 }
 
 #search-form,
