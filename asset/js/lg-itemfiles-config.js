@@ -11,6 +11,7 @@
             thumbnail: true,
             selector: '.media.resource',
             showMaximizeIcon: true,
+            autoplayFirstVideo: false,
             plugins: [
                 lgThumbnail,lgZoom,lgVideo,
             ],
