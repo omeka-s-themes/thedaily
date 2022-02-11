@@ -179,11 +179,44 @@ ul {
         margin: 0 0 0 $spacing-s;
     }
 
+    .expand:after,
+    .collapse:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    .expand:after {
+        content: "\f0da";
+    }
+
+    .collapse:after {
+        content: "\f0d7";
+    }
+
+    .expand + .collapsible {
+        display: none;
+    }
+
     .collapsible {
         font-weight: normal;
-        font-size: .75 * $base-font-size;
+        font-size: .875 * $base-font-size;
         font-family: $body-font;
-        line-height: .75 * $base-line-height;
+        line-height: .875 * $base-line-height;
+        background-color: $lightgray;
+        padding: $spacing-m $spacing-l;
+        margin: $spacing-m 0;
+    }
+
+    .collapsible h4 {
+        font-family: $body-font;
+        font-size: .875 * $base-font-size;
+        line-height: .875 * $base-line-height;
+        font-weight: 900;
+    }
+
+    .collapsible .property:last-child,
+    .collapsible .property:only-child {
+        margin-bottom: 0;
     }
 
     /* @end */
@@ -791,6 +824,10 @@ footer {
 
 .value a.metadata-browse-link {
     float: right;
+}
+
+#content .resource a.resource-link {
+    background-color: transparent;
 }
 
 .resource-link img {
