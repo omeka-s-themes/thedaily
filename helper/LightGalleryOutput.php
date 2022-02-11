@@ -27,7 +27,26 @@ class LightGalleryOutput extends AbstractHelper
                 'description' => 'data-sub-html="'. $media->displayDescription() . '"'
             ];
             $mediaCaptionAttribute = ($mediaCaption) ? $mediaCaptionOptions[$mediaCaption] : '';
-            $html .=  '<li data-src="' . $source . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
+            $mediaType = $media->mediatype();
+            if (strpos($mediaType, 'video') !== false) {
+                $videoSrcObject = [
+                    'source' => [
+                        [
+                            'src' => $source, 
+                            'type' => $mediaType,
+                        ]
+                    ], 
+                    'attributes' => [
+                        'preload' => false, 
+                        'playsinline' => true, 
+                        'controls' => true,
+                    ],
+                ];
+                $videoSrcJson = json_encode($videoSrcObject);
+                $html .=  '<li data-video="' . $escape($videoSrcJson) . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
+            } else {
+                $html .=  '<li data-src="' . $source . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
+            }
             $html .= $media->render();
             $html .= '</li>';
         }

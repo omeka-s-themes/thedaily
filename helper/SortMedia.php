@@ -8,7 +8,7 @@ class SortMedia extends AbstractHelper
     public function __invoke($files = null) 
     { 
         $sortedMedia = [];
-        $whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml'];
+        $whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'video/mp4'];
 
         foreach ($files as $media) {
             $mediaType = $media->mediaType();
