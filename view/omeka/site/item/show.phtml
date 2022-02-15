@@ -28,7 +28,7 @@ if ($subjectValues) {
 
 <?php echo $item->displayValues(); ?>
 
-<?php if (isset($otherMedia)): ?>
+<?php if (isset($otherMedia) && (count($otherMedia) > 0)): ?>
 <div id="other-media" class="property">
     <h4><?php echo $this->translate('Other Media'); ?></h4>
     <div class="values">

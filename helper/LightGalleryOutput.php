@@ -19,7 +19,8 @@ class LightGalleryOutput extends AbstractHelper
         $html = '<ul id="itemfiles" class="media-list">';
         $mediaCaption = $view->themeSetting('media_caption');
 
-        foreach ($files as $media) {
+        foreach ($files as $file) {
+            $media = $file['media'];
             $source = ($media->originalUrl()) ? $media->originalUrl() : $media->source(); 
             $mediaCaptionOptions = [
                 'none' => '',
@@ -42,6 +43,17 @@ class LightGalleryOutput extends AbstractHelper
                         'controls' => true,
                     ],
                 ];
+                if (isset($file['tracks'])) {
+                    foreach ($file['tracks'] as $key => $track) {
+                        $label = $track->displayTitle();
+                        $srclang = ($track->value('Dublin Core, Language')) ? $track->value('Dublin Core, Language') : '';
+                        $type = ($track->value('Dublin Core, Type')) ? $track->value('Dublin Core, Type') : 'captions';
+                        $videoSrcObject['tracks'][$key]['src'] = $track->originalUrl();
+                        $videoSrcObject['tracks'][$key]['label'] = $label;
+                        $videoSrcObject['tracks'][$key]['srclang'] = $srclang;
+                        $videoSrcObject['tracks'][$key]['kind'] = $type;
+                    }
+                }
                 $videoSrcJson = json_encode($videoSrcObject);
                 $html .=  '<li data-video="' . $escape($videoSrcJson) . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
             } else {
