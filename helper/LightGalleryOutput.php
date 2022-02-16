@@ -46,8 +46,8 @@ class LightGalleryOutput extends AbstractHelper
                 if (isset($file['tracks'])) {
                     foreach ($file['tracks'] as $key => $track) {
                         $label = $track->displayTitle();
-                        $srclang = ($track->value('Dublin Core, Language')) ? $track->value('Dublin Core, Language') : '';
-                        $type = ($track->value('Dublin Core, Type')) ? $track->value('Dublin Core, Type') : 'captions';
+                        $srclang = ($track->value('Dublin Core, Language')) ? $track->value('dcterms:language') : '';
+                        $type = ($track->value('Dublin Core, Type')) ? $track->value('dcterms:type') : 'captions';
                         $videoSrcObject['tracks'][$key]['src'] = $track->originalUrl();
                         $videoSrcObject['tracks'][$key]['label'] = $label;
                         $videoSrcObject['tracks'][$key]['srclang'] = $srclang;

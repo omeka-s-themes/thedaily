@@ -9,9 +9,29 @@ $enableLightGallery = strpos($mediaType, 'image') !== false;
 <h3><?php echo $this->translate('Media'); ?></h3>
 <?php $this->trigger('view.show.before'); ?>
 <?php if ($enableLightGallery): ?>
-    <?php echo $this->LightGalleryOutput([$media]); ?>
+    <?php echo $this->LightGalleryOutput([['media' => $media]]); ?>
 <?php else: ?>
+    <?php if (strpos($mediaType, 'video') !== false): ?>
+        <?php 
+            $mediaItem = $media->item();
+            $itemAttachments = $this->SortMedia($mediaItem->media());
+        ?>
+        <?php foreach ($itemAttachments['lightMedia'] as $itemAttachment): ?>
+            <?php if ($itemAttachment['media']->source() == $media->source()): ?>
+                <video controls>
+                    <source src="<?php echo $media->originalUrl(); ?>" type="<?php echo $mediaType; ?>">
+                    <p><?php $this->translate('Your browser does not support HTML5 video.'); ?></p>
+                    <?php if ($tracks = $itemAttachment['tracks']): ?>
+                        <?php foreach ($tracks as $track): ?>
+                            <track label="<?php echo $track->displayTitle(); ?>" kind="<?php echo $track->value('dcterms:type'); ?>" srclang="<?php echo $track->value('dcterms:language'); ?>" src="<?php echo $track->originalUrl(); ?>">
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </video>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php else: ?>
     <?php echo $media->render(); ?>
+    <?php endif; ?>
 <?php endif; ?>
 <?php echo $media->displayValues(); ?>
 <?php $this->trigger('view.show.after'); ?>

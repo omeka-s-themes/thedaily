@@ -8,7 +8,7 @@ class SortMedia extends AbstractHelper
     public function __invoke($files = null) 
     { 
         $sortedMedia = [];
-        $whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'video/mp4'];
+        $whitelist = ['image/bmp', 'image/gif', 'image/jpeg', 'image/png', 'image/svg+xml', 'video/mp4', 'video/webm'];
         $html5videos = [];
         $mediaCount = 0;
 
@@ -17,7 +17,7 @@ class SortMedia extends AbstractHelper
             $mediaRenderer = $media->renderer();
             if (in_array($mediaType, $whitelist) || (strpos($mediaRenderer, 'youtube') !== false)) {
                 $sortedMedia['lightMedia'][$mediaCount]['media'] = $media;
-                if ($mediaType == 'video/mp4') {
+                if (strpos($mediaType,'video') !== false) {
                     $html5videos[$mediaCount] = pathinfo($media->source(), PATHINFO_FILENAME);
                     $sortedMedia['lightMedia'][$mediaCount]['tracks'] = [];
                 }
