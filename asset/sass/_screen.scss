@@ -822,8 +822,19 @@ footer {
     background-color: $primary-color;
 }
 
+.value .value-content:not(:only-child) {
+    margin-right: $spacing-s;
+}
+
+.value .expand,
+.value .collapse {
+    padding: 0 $spacing-s;
+}
+
 .value a.metadata-browse-link {
-    float: right;
+    width: auto;
+    display: inline-block !important;
+    padding: 0 $spacing-s;
 }
 
 #content .resource a.resource-link {
@@ -1072,7 +1083,7 @@ footer {
     align-items: center;
 }
 
-.page .item-with-metadata .media-list img {
+.page .item-with-metadata .media-list .media.resource {
     margin: 0 $spacing-l $spacing-l 0;
 }
 
