@@ -18,6 +18,7 @@ $enableLightGallery = strpos($mediaType, 'image') !== false;
         ?>
         <?php foreach ($itemAttachments['lightMedia'] as $itemAttachment): ?>
             <?php if ($itemAttachment['media']->source() == $media->source()): ?>
+                <div class="media-render">
                 <video controls>
                     <source src="<?php echo $media->originalUrl(); ?>" type="<?php echo $mediaType; ?>">
                     <p><?php $this->translate('Your browser does not support HTML5 video.'); ?></p>
@@ -27,6 +28,7 @@ $enableLightGallery = strpos($mediaType, 'image') !== false;
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </video>
+                </div>
             <?php endif; ?>
         <?php endforeach; ?>
     <?php else: ?>

@@ -27,7 +27,7 @@ class SortMedia extends AbstractHelper
                 $sortedMedia['otherMedia'][] = $media;
             }
         }
-        if ((count($html5videos) > 0) && $sortedMedia['otherMedia']) {
+        if ((count($html5videos) > 0) && isset($sortedMedia['otherMedia'])) {
             foreach ($html5videos as $fileId => $filename) {
                 foreach ($sortedMedia['otherMedia'] as $key => $otherMedia) {
                     if ($otherMedia->source() == "$filename.vtt") {
