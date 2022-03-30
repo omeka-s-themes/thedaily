@@ -56,6 +56,8 @@ class LightGalleryOutput extends AbstractHelper
                 }
                 $videoSrcJson = json_encode($videoSrcObject);
                 $html .=  '<li data-video="' . $escape($videoSrcJson) . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
+            } else if ($mediaType == 'application/pdf') {
+                $html .=  '<li data-iframe="' . $escape($source) . '" '. $mediaCaptionAttribute . 'data-src="' . $source . '" data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
             } else {
                 $html .=  '<li data-src="' . $source . '" ' . $mediaCaptionAttribute . 'data-thumb="' . $escape($media->thumbnailUrl('medium')) . '" data-download-url="' . $source . '" class="media resource">';
             }
@@ -67,4 +69,3 @@ class LightGalleryOutput extends AbstractHelper
         return $html;
     }
 }
-
