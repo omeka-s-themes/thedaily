@@ -8,12 +8,14 @@ class LightGalleryOutput extends AbstractHelper
     public function __invoke($files = null) 
     {
         $view = $this->getView();
-        $view->headScript()->prependFile($view->assetUrl('js/lightgallery.min.js'));
-        $view->headScript()->appendFile($view->assetUrl('js/lg-thumbnail.js'));
-        $view->headScript()->appendFile($view->assetUrl('js/lg-zoom.js'));
-        $view->headScript()->appendFile($view->assetUrl('js/lg-video.js'));
+        $view->headScript()->prependFile($view->assetUrl('vendor/lightgallery/js/lightgallery.min.js'));
+        $view->headScript()->appendFile($view->assetUrl('vendor/lightgallery/js/plugins/thumbnail/lg-thumbnail.js'));
+        $view->headScript()->appendFile($view->assetUrl('vendor/lightgallery/js/plugins/zoom/lg-zoom.js'));
+        $view->headScript()->appendFile($view->assetUrl('vendor/lightgallery/js/plugins/video/lg-video.js'));
+        $view->headScript()->appendFile($view->assetUrl('vendor/lightgallery/js/plugins/hash/lg-hash.js'));
+        $view->headScript()->appendFile($view->assetUrl('vendor/lightgallery/js/plugins/rotate/lg-rotate.js'));
         $view->headScript()->appendFile($view->assetUrl('js/lg-itemfiles-config.js'));
-        $view->headLink()->prependStylesheet($view->assetUrl('css/lightgallery.min.css'));
+        $view->headLink()->prependStylesheet($view->assetUrl('vendor/lightgallery/css/lightgallery.min.css'));
         $escape = $view->plugin('escapeHtml');
 
         $html = '<ul id="itemfiles" class="media-list">';
