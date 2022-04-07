@@ -1085,6 +1085,26 @@ footer {
     font-display:block
 }
 
+.lg-outer[data-lg-slide-type="iframe"] .lg-flip-hor, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-flip-ver, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-rotate-left, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-rotate-right, 
+.lg-outer[data-lg-slide-type="video"] .lg-flip-hor, 
+.lg-outer[data-lg-slide-type="video"] .lg-flip-ver, 
+.lg-outer[data-lg-slide-type="video"] .lg-rotate-left, 
+.lg-outer[data-lg-slide-type="video"] .lg-rotate-right,
+.lg-outer.lg-first-slide-loading .lg-actual-size, 
+.lg-outer.lg-first-slide-loading .lg-zoom-in, 
+.lg-outer.lg-first-slide-loading .lg-zoom-out, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-actual-size, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-zoom-in, 
+.lg-outer[data-lg-slide-type="iframe"] .lg-zoom-out, 
+.lg-outer[data-lg-slide-type="video"] .lg-actual-size, 
+.lg-outer[data-lg-slide-type="video"] .lg-zoom-in, 
+.lg-outer[data-lg-slide-type="video"] .lg-zoom-out {
+    display: none;
+}
+
 .media-render a.lg-icon {
     font-family: lg !important;
     speak: never;
