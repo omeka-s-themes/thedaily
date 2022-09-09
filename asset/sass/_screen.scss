@@ -781,8 +781,12 @@ footer {
     flex-wrap: wrap;
 }
 
+a.resource-link {
+    background-color: transparent;
+}
+
 .property a:not(.resource-link),
-.property a.resource-link .resource-name{
+a.resource-link .resource-name{
     background-color: $primary-color;  
 }
 
@@ -1243,6 +1247,9 @@ footer {
   margin-bottom: $spacing-l;
   width: 50%;
   padding-right: $spacing-l;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .results .result-title {
@@ -1257,15 +1264,7 @@ footer {
   }
 }
 
-.results .resource-link {
-    background-color: transparent;
-
-    .resource-name {
-        background-color: $primary-color;
-    }
-}
-
-.results li a {
+.results li a:not(.resource-link) {
   background-color: $primary-color;
 }
 
@@ -1279,9 +1278,9 @@ footer {
   display: inline-block;
 }
 
+
 .results > ul + a {
   padding: $spacing-s $spacing-m;
-  background-color: $primary-color;
   border: 3px solid #000;
   font-family: $heading-font;
   font-size: $base-font-size;
@@ -1326,8 +1325,8 @@ footer {
   columns: 2;
   
   li {
-    margin-bottom: $spacing-s;
-    padding-bottom: $spacing-s;
+    margin-bottom: $spacing-m;
+    padding-bottom: $spacing-m;
     border-bottom: 1px solid #000;
   }
 }

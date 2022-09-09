@@ -25,10 +25,10 @@
     .results .result-title a,
     .results > a,
     .results > ul + a,
-    .results li > a,
+    .results li > a:not(.resource-link),
     .breadcrumbs a,
     #content .resource a,
-    .property a.resource-link .resource-name,
+    a.resource-link .resource-name,
     .property a:not(.resource-link) {
         background-color: <?php echo $accentColor; ?>;
     }
