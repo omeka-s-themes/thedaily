@@ -660,7 +660,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
 }
 
 .sorting {
@@ -839,6 +838,17 @@ a.resource-link .resource-name{
     width: auto;
     display: inline-block !important;
     padding: 0 $spacing-s;
+}
+
+.value-content + a {
+    display: inline-block;
+}
+
+.value .resource-link,
+.results .resource-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .resource-link img {
