@@ -438,14 +438,14 @@ header nav > ul {
     vertical-align: top;
 }
 
-#top-nav > ul {
+#top-nav.open > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-#search-form.closed,
-#top-nav.closed > ul {
+#search-form,
+#top-nav > ul {
     display: none;
 }
 
@@ -487,7 +487,7 @@ header nav > ul {
     }
 }
 
-#search-form {
+#search-form.open {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;

@@ -48,7 +48,7 @@ $this->trigger('view.layout');
                 <?php echo $this->partial('common/search-form'); ?>
                 <button type="button" class="search-toggle" aria-label="Toggle search"></button>
             </div>
-            <nav id="top-nav" class="closed">
+            <nav id="top-nav">
             <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
             <?php
             echo $site->publicNav()->menu()->renderMenu(null, [

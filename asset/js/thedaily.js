@@ -1,7 +1,7 @@
 (function($) {
     $(document).ready(function() {
         $('.search-toggle').click(function() {
-            $('#top-nav.open, #search-form').toggleClass('closed').toggleClass('open');
+            $('#top-nav.open, #search-form').toggleClass('open');
             $('body').toggleClass('search-open');
             if ($('body').hasClass('menu-open')) {
                 $('body').removeClass('menu-open');
@@ -10,7 +10,7 @@
         });
 
         $('.menu-toggle').click(function() {
-            $('#search-form.open, #top-nav').toggleClass('closed').toggleClass('open');
+            $('#search-form.open, #top-nav').toggleClass('open');
             $('body').toggleClass('menu-open');
             if ($('body').hasClass('search-open')) {
                 $('body').removeClass('search-open');
