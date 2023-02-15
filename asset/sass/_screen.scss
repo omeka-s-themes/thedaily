@@ -531,10 +531,6 @@ header nav > ul {
     display: flex;
     align-items: center;
     overflow: hidden;
-
-    &.contained {
-      @include container;
-    }
 }
 
 .banner img {
@@ -983,7 +979,7 @@ a.resource-link .resource-name{
 .sub-menu {
     background-color: $primary-color;
     padding: $spacing-l;
-    @include bleed($spacing-l (2 * $spacing-l) 0);
+    margin: (-1 * $spacing-l) (-2 * $spacing-l) 0;
     margin-bottom: $spacing-l;
 }
 
