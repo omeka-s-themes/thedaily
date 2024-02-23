@@ -1165,6 +1165,11 @@ a.resource-link .resource-name{
     margin-top: $spacing-m;
 }
 
+.block-pageDateTime .value {
+    padding: 0;
+    border-top: 0;
+}
+
 /* @end */
 
 /* @group ----- Search ----- */
