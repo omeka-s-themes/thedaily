@@ -277,6 +277,10 @@ nav li {
     font-size: .75 * $base-font-size;
 }
 
+.breadcrumbs {
+    margin-bottom: $spacing-l;
+}
+
 .breadcrumbs a {
     background-color: $primary-color;
 }
