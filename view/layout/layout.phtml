@@ -14,9 +14,6 @@ $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
 $this->jsTranslate();
 $banner = $this->themeSettingAssetUrl('banner');
-$bannerHeight = $this->themeSetting('banner_height');
-$bannerHeightMobile = $this->themeSetting('banner_height_mobile');
-$bannerPosition = ($this->themeSetting('banner_position')) ? str_replace('_','-', $this->themeSetting('banner_position')) : 'center';
 $userBar = $this->userBar();
 $this->trigger('view.layout');
 ?>
