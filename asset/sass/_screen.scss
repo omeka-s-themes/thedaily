@@ -296,6 +296,11 @@ nav li {
     display: inline-block;
 }
 
+.pagination form,
+.pagination-buttons {
+    margin-right: $spacing-s;
+}
+
 .pagination .inactive {
     display: none;
 }
@@ -330,10 +335,6 @@ nav li {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     margin: 0 $spacing-s;
-}
-
-.pagination .row-count {
-    margin-left: $base-line-height;
 }
 
 .item-pagination {
@@ -1162,6 +1163,10 @@ a.resource-link .resource-name{
 
 .media-list .resource-link:not(:first-of-type) {
     margin-top: $spacing-m;
+}
+
+.block-listOfSites .pagination {
+    padding: 0;
 }
 
 .block-pageDateTime .value {
