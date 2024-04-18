@@ -1,6 +1,6 @@
 {
   "name": "thedaily",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Sans serif theme for Omeka S featuring custom colors.",
   "main": "gulpfile.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "omeka-s",
     "theme"
   ],
-  "author": "RRCHNM",
+  "author": "Omeka Team",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/omeka-s-themes/thedaily/issues"
