@@ -137,6 +137,7 @@ ul {
         flex-wrap: wrap;
         margin-bottom: $spacing-l;
         align-items: flex-start;
+        width: 100%;
     }
 
     form .field.required .field-meta:after {
@@ -155,12 +156,12 @@ ul {
     }
 
     form .field .field-meta {
-        width: span(3 of 12 alpha);
+        width: 25%;
         padding-right: $spacing-m;
     }
 
     form .field > .inputs {
-        width: span(9 of 12 omega);
+        width: 75%;
         padding-left: $spacing-m;
     }
 
