@@ -5,39 +5,10 @@ $bannerPosition = ($this->themeSetting('banner_position')) ? str_replace('_','-'
 $accentColor = $this->themeSetting('accent_color');
 ?>
 <style>
-    <?php if ($accentColor): ?>
-    #top-nav > ul > li > a,
-    #featured .record a,
-    .site-page-pagination a,
-    #top-nav > ul > li > a,
-    #featured .record a,
-    .site-page-pagination a,
-    .results .result-title a {
-        color: <?php echo $accentColor; ?>
+    :root {
+        --accent-color: <?php echo $accentColor; ?>;
     }
-    
-    p a,
-    span a,
-    .button,
-    button,
-    input[type="submit"],
-    .secondary-nav li a,
-    .pagination a.button,
-    .item-pagination a,
-    #featured .featured-meta h3,
-    .advanced-search,
-    .value a span,
-    .sub-menu,
-    .results .result-title a,
-    .results > a,
-    .results > ul + a,
-    .results li > a:not(.resource-link),
-    .breadcrumbs a,
-    a.resource-link .resource-name,
-    .property a:not(.resource-link) {
-        background-color: <?php echo $accentColor; ?>;
-    }
-    <?php endif; ?>
+
     .banner {
         height: <?php echo ($bannerHeight !== '') ? $bannerHeight: 'auto'  ?>;
         align-items: <?php echo $bannerPosition; ?>;

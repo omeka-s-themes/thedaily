@@ -14,7 +14,7 @@ $body-font: "Assistant", sans-serif;
 
 //Colors
 
-$primary-color: yellow;
+$primary-color: var(--accent-color, yellow);
 $lightgray: #ececec;
 
 //Susy
