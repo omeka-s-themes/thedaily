@@ -53,6 +53,10 @@ a img {
     vertical-align: bottom;
 }
 
+img {
+    max-width: 100%;
+}
+
 p a,
 span a {
     background-color: $primary-color;
