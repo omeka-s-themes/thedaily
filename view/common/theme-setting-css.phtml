@@ -10,10 +10,10 @@ $accentColor = $this->themeSetting('accent_color');
     }
 
     .banner {
-        height: <?php echo ($bannerHeight !== '') ? $bannerHeight: 'auto'  ?>;
+        height: <?php echo (isset($bannerHeight) && $bannerHeight !== '') ? $bannerHeight : 'auto'  ?>;
         align-items: <?php echo $bannerPosition; ?>;
     }
-    <?php if ($bannerHeightMobile !== ''): ?>
+    <?php if (isset($bannerHeightMobile) && $bannerHeightMobile !== ''): ?>
         @media screen and (max-width:640px) {
             .banner {
                 height: <?php echo $bannerHeightMobile; ?>;
