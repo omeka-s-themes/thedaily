@@ -157,12 +157,6 @@ div#featured {
     font-size: $mobile-font-size;
 }
 
-.records .hentry {
-    font-size: 1.5 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-    width: calc(50% - #{$spacing-l});
-}
-
 .collection.hentry h2 {
     font-size: 1.5 * $mobile-font-size;
     line-height: 1.5 * $mobile-line-height;
@@ -171,7 +165,12 @@ div#featured {
 .resource-list .resource {
     font-size: $mobile-font-size;
     line-height: $mobile-line-height;
-    width: calc(50% - #{$spacing-l});
+}
+
+@container (width < 480px) {
+    .resource-list .resource {
+        width: 100%;
+    }
 }
 
 .browse-controls {

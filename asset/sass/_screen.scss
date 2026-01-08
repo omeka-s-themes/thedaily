@@ -660,7 +660,7 @@ footer {
     color: #000;
     padding: 0 $spacing-m;
     border: 3px solid #000;
-    height: 1.5 * $base-line-height;
+    min-height: 1.5 * $base-line-height;
     line-height: 1.25 * $base-line-height;
 }
 
@@ -673,12 +673,19 @@ footer {
 }
 
 .sorting {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25 * $base-line-height;
+
     select {
         width: auto;
+        max-width: 100%;
     }
 
     button {
         margin: 0;
+        min-height: 1.5 * $base-line-height;
     }
 }
 
@@ -691,6 +698,7 @@ footer {
     margin: $spacing-l 0 0;
     list-style: none;
     padding-left: 0;
+    container-type: inline-size;
 }
 
 .resource-list .resource {
@@ -702,6 +710,13 @@ footer {
         margin-right: 0;
     }
 }
+
+@container (width < 760px) {
+    .resource-list .resource {
+        width: calc(50% - #{$spacing-l});
+    }
+}
+
 
 .resource-list .resource-name {
     font-family: $heading-font;
