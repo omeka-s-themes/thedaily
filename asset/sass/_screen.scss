@@ -439,48 +439,70 @@ header nav .menu-toggle:before {
     font-weight: 900;
 }
 
-#search-form,
-header nav > ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,.9);
-    z-index: 9999;
-    margin: 0;
-    padding: (2 * $spacing-l);
-    text-align: left;
-    height: calc(100vh - #{2 * $spacing-l});
+#search-modal,
+#nav-modal {
     color: #fff;
-    vertical-align: top;
+    background-color: transparent;
+    border: 0;
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
 }
 
-#top-nav.open > ul {
+#search-modal::backdrop,
+#nav-modal::backdrop {
+    background-color: rgba(0,0,0,.93);
+}
+
+.modal-body {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
 }
 
-#search-form,
-#top-nav > ul {
-    display: none;
+#top-nav .nav-list {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    max-height: 100vh;
+    width: 100%;
+    gap: 1rem;
+    container-type: inline-size;
 }
 
 #top-nav li {
     list-style-type: none;
 }
 
-#top-nav > ul > li {
+#top-nav .nav-list > li {
     font-family: $heading-font;
     padding-bottom: $spacing-l;
-    width: 30%;
+    width: calc(25% - 1rem);
 }
 
-#top-nav > ul > li > a {
+@container (width < 640px) {
+    #top-nav .nav-list > li {
+        width: calc(50% - 1rem);
+    }
+}
+
+@container (width < 460px) {
+    #top-nav .nav-list > li {
+        width: 100%
+    }
+}
+
+#top-nav .nav-list > li > a {
     color: $primary-color;
 }
 
-#top-nav > ul > li li {
+#top-nav .nav-list > li li {
     font-family: $body-font;
     display: block;
 
@@ -504,12 +526,21 @@ header nav > ul {
     }
 }
 
-#search-form.open {
+#search-modal .modal-body {
+    max-width: 800px;
+    margin: auto;
+    align-content: center;
+}
+
+#search-form {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 20vh;
+    width: 100%;
+}
+
+dialog h2 {
+    width: 100%;
 }
 
 #search-form input[type="text"] {
@@ -518,15 +549,22 @@ header nav > ul {
     background-color: transparent;
     color: #fff;
     display: inline-block;
-    width: 50%;
     margin-right: $spacing-m;
     font-size: 2 * $base-font-size;
     height: 2 * $base-line-height;
+    width: 100%;
     padding: 0;
 }
 
 ::placeholder {
     font-style: italic;
+}
+
+.modal-close {
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    margin-left: auto;
 }
 
 #search-form button[type="submit"] {

@@ -1,21 +1,21 @@
 (function($) {
     $(document).ready(function() {
-        $('.search-toggle').click(function() {
-            $('#top-nav.open, #search-form').toggleClass('open');
-            $('body').toggleClass('search-open');
-            if ($('body').hasClass('menu-open')) {
-                $('body').removeClass('menu-open');
-            }
-            $('input[name="fulltext_search"]').focus()
+        $('header').on('click', '.modal-close', function() {
+            const dialogElement = $(this).parents('dialog');
+            const dialogId = dialogElement.attr('id');
+            const dialog = document.getElementById(dialogId);
+            dialog.close();
+
         });
 
-        $('.menu-toggle').click(function() {
-            $('#search-form.open, #top-nav').toggleClass('open');
-            $('body').toggleClass('menu-open');
-            if ($('body').hasClass('search-open')) {
-                $('body').removeClass('search-open');
-            }
-            $('#top-nav a').first().focus();
+        $('header').on('click', '.search-toggle', function() {
+            const navModal = document.getElementById('search-modal');
+            navModal.showModal();
+        });
+
+        $('header').on('click', '.menu-toggle', function() {
+            const navModal = document.getElementById('nav-modal');
+            navModal.showModal();
         });
 
         $('#top-nav a').last().on('keydown', function(e) {
@@ -24,7 +24,7 @@
             }
         });
 
-        $('header').click(function(e){
+        $('document').on('click', function(e){
             $target = $(e.target);
             if ($target.is("header")) {
                 // close both

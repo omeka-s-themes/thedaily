@@ -2,7 +2,7 @@
 $bannerHeight = $this->themeSetting('banner_height');
 $bannerHeightMobile = $this->themeSetting('banner_height_mobile');
 $bannerPosition = ($this->themeSetting('banner_position')) ? str_replace('_','-', $this->themeSetting('banner_position')) : 'center';
-$accentColor = $this->themeSetting('accent_color');
+$accentColor = ($this->themeSetting('accent_color')) ? $this->themeSetting('accent_color') : 'yellow';
 ?>
 <style>
     :root {

@@ -41,17 +41,24 @@ $this->trigger('view.layout');
                 <?php endif; ?>
                 </a>
             </h1>
-            <div id="search-container">
-                <?php echo $this->partial('common/search-form'); ?>
-                <button type="button" class="search-toggle" aria-label="Toggle search"></button>
+            <button type="button" class="search-toggle" aria-label="Toggle search"></button>
+            <div id="search-container" role="dialog" aria-labelledby="search-form" aria-modal="true">
+                <?php echo $this->partial('common/modal-search-form'); ?>
             </div>
             <nav id="top-nav">
-            <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
-            <?php
-            echo $site->publicNav()->menu()->renderMenu(null, [
-                'maxDepth' => $this->themeSetting('nav_depth') - 1
-            ]);
-            ?>
+                <button type="button" class="menu-toggle" aria-label="Toggle Menu"></button>
+                <dialog id="nav-modal" aria-labelledby="top-nav-heading">
+                    <div class="modal-body">
+                        <button type="button" id="top-nav-close" class="o-icon-close modal-close" aria-label="<?php echo $this->translate('Close'); ?>"></button>
+                        <h2 id="top-nav-heading"><?php echo $this->translate('Navigation'); ?></h2>
+                        <?php
+                        echo $site->publicNav()->menu()->renderMenu(null, [
+                            'maxDepth' => $this->themeSetting('nav_depth') - 1,
+                            'ulClass' => 'nav-list'
+                        ]);
+                        ?>
+                    </div>
+                </dialog>
             </nav>
         </header>
         <?php if ($banner): ?>
