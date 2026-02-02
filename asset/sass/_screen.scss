@@ -1040,7 +1040,7 @@ a.resource-link .resource-name{
 
 .sub-menu {
     background-color: $primary-color;
-    padding: $spacing-l;
+    padding: $spacing-l (2 * $spacing-l);
     margin: (-1 * $spacing-l) (-2 * $spacing-l) 0;
     margin-bottom: $spacing-l;
 }
@@ -1406,6 +1406,7 @@ body.menu-open {
 
 #content {
     padding: $spacing-l (2 * $spacing-l) 0;
+    overflow-x: hidden;
 }
 
 #content > h2:first-child {

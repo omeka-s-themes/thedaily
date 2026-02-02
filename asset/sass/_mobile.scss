@@ -121,6 +121,16 @@ header h1 {
     width: 100%;
 }
 
+header button {
+    height: 1.5 * $spacing-l;
+    font-size: $base-font-size;
+}
+
+.sub-menu {
+    margin: (-1 * $spacing-l) (-1 * $spacing-l) $spacing-l;
+    padding: $spacing-l;
+}
+
 /* @end */
 
 /* @group ----- Footer ----- */
@@ -185,6 +195,12 @@ div#featured {
 .pagination {
     margin: $spacing-m 0;
     padding: 0;
+}
+
+.resource-list .resource-name {
+    font-size: 1.5 * $mobile-font-size;
+    line-height: 1.5 * $mobile-line-height;
+
 }
 
 /* @end */
