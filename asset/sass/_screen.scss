@@ -191,6 +191,14 @@ ul {
         margin: 0 0 0 $spacing-s;
     }
 
+    .expand,
+    .collapse {
+        display: inline-block;
+        min-height: 24px;
+        min-width: 24px;
+        text-align: center;
+    }
+
     .expand:after,
     .collapse:after {
         font-family: 'Font Awesome 5 Free';
