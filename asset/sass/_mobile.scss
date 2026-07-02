@@ -44,26 +44,19 @@ h4 {
     }
 
     form .field {
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     form .field .field-meta,
     form .field > label,
-    form .field > .label {
-        width: 100%;
-        padding-right: 0;
-        margin-bottom: $spacing-s;
-    }
-
+    form .field > .label,
     form .field > .inputs {
         width: 100%;
-        padding-left: 0;
     }
 
     .add-value.button {
         font-size: 1.5 * $mobile-font-size;
         line-height: 1.5 * $mobile-line-height;
-        height: auto;
     }
 
     /* @end */

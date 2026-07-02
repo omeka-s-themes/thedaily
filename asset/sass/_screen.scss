@@ -145,10 +145,10 @@ ul {
 
     form .field {
         display: flex;
-        flex-wrap: wrap;
         margin-bottom: $spacing-l;
         align-items: flex-start;
         width: 100%;
+        gap: 0 $spacing-l;
     }
 
     form .field.required .field-meta:after {
@@ -168,16 +168,11 @@ ul {
 
     form .field .field-meta {
         width: 25%;
-        padding-right: $spacing-m;
+        padding: $spacing-s 0;
     }
 
     form .field > .inputs {
         width: 75%;
-        padding-left: $spacing-m;
-    }
-
-    form .field > .inputs .value {
-        width: 100%;
     }
 
     form .field > .inputs .value:not(:first-of-type) {
@@ -222,9 +217,7 @@ ul {
         font-size: .875 * $base-font-size;
         font-family: $body-font;
         line-height: .875 * $base-line-height;
-        background-color: $lightgray;
-        padding: $spacing-m $spacing-l;
-        margin: $spacing-m 0;
+        margin: $spacing-m 0 0;
     }
 
     .collapsible h4 {
@@ -1011,35 +1004,24 @@ a.resource-link .resource-name{
 
 /* @group ----- Advanced Item Search ----- */
 
-#advanced-search .value {
-    display: flex;
-    margin-bottom: $spacing-m;
+#advanced-search .multi-value.field .field-meta {
+    padding-right: 2 * $spacing-l;
 }
 
-#advanced-search .value:not(:first-child) {
-    margin-top: $spacing-m;
+#advanced-search .multi-value.field .collapsible {
+    margin-right: -2 * $spacing-l;
 }
 
 #advanced-search button.remove-value {
     width: 1.5 * $base-line-height;
     height: 1.5 * $base-line-height;
-    position: relative;
     background-color: #000;
     color: #fff;
-    margin-left: .25 * $base-line-height;
     padding: 0 $spacing-s;
-}
-
-#advanced-search button.remove-value:before {
-    text-align: center;
-    padding: 0;
-    width: 100%;
-    text-indent: 0;
 }
 
 .add-value.button {
     font-size: .75 * $base-font-size;
-    display: block;
 }
 
 /* @end */
