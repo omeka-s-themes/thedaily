@@ -106,7 +106,7 @@ ul {
     input[type="datetime-local"],
     textarea {
         height: 1.5 * $base-line-height;
-        appearance: none;
+        appearance: none; 
         border: 1px solid #ccc;
         background-color: #fff;
         padding: $spacing-s;
@@ -1406,6 +1406,14 @@ body.menu-open {
 
 #primary {
     width: 100%;
+}
+
+/* @end */
+
+/* @group ----- Modules ----- */
+
+label.numeric-toggle-time {
+    height: 100%;
 }
 
 /* @end */

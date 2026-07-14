@@ -1,33 +1,3 @@
-/* @group ----- Generic HTML Elements ----- */
-
-html {
-    font-size: 1.5 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-}
-
-h1 {
-    font-size: 2.25 * $mobile-font-size;
-    line-height: 2 * $mobile-line-height;
-    margin: 0 0 $spacing-l;
-}
-
-h2 {
-    font-size: 2 * $mobile-font-size;
-    line-height: 2 * $mobile-line-height;
-    margin: $spacing-l 0;
-}
-
-h3 {
-    font-size: 1.75 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-    margin: $spacing-l 0;
-}
-
-h4 {
-    margin: $spacing-l 0;
-    font-size: 1.5 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-}
 
     /* @group ----- Form elements ----- */
 
@@ -37,8 +7,6 @@ h4 {
     button,
     .button,
     select {
-        font-size: $mobile-font-size;
-        line-height: $mobile-line-height;
         margin: 0;
         height: auto;
     }
@@ -54,11 +22,6 @@ h4 {
         width: 100%;
     }
 
-    .add-value.button {
-        font-size: 1.5 * $mobile-font-size;
-        line-height: 1.5 * $mobile-line-height;
-    }
-
     /* @end */
 
 /* @end */
@@ -71,18 +34,6 @@ h4 {
 
 /* @end */
 
-/* @group ----- Navigation ----- */
-
-.secondary-nav li a,
-.pagination,
-.pagination input[type="text"],
-.item-pagination {
-    font-size: $mobile-font-size;
-}
-
-
-/* @end */
-
 /* @group ----- Header ----- */
 
 header {
@@ -91,8 +42,6 @@ header {
 
 header h1 {
     margin-bottom: 0;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
 }
 
 #top-nav > ul {
@@ -103,11 +52,6 @@ header h1 {
 
 #top-nav.open > ul {
     display: block;
-}
-
-#top-nav ul ul ul li {
-    font-size: $mobile-font-size;
-    line-height: $mobile-line-height;
 }
 
 #top-nav > ul > li {
@@ -155,21 +99,6 @@ div#featured {
 
 /* @group ----- Browse ----- */
 
-.browse #outputs,
-#sort-links {
-    font-size: $mobile-font-size;
-}
-
-.collection.hentry h2 {
-    font-size: 1.5 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-}
-
-.resource-list .resource {
-    font-size: $mobile-font-size;
-    line-height: $mobile-line-height;
-}
-
 @container (width < 480px) {
     .resource-list .resource {
         width: 100%;
@@ -182,18 +111,11 @@ div#featured {
 
 .advanced-search {
     margin-bottom: $spacing-m;
-    font-size: $mobile-font-size;
 }
 
 .pagination {
     margin: $spacing-m 0;
     padding: 0;
-}
-
-.resource-list .resource-name {
-    font-size: 1.5 * $mobile-font-size;
-    line-height: 1.5 * $mobile-line-height;
-
 }
 
 /* @end */
@@ -209,7 +131,6 @@ div#featured {
 .property dd,
 .property .values,
 .item-with-metadata .media-list {
-    font-size: 1.5 * $mobile-font-size;
     width: 100%;
     text-align: left;
 }
