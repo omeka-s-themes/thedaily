@@ -1412,8 +1412,12 @@ body.menu-open {
 
 /* @group ----- Modules ----- */
 
+select[class*="numeric"] {
+    max-height: 1.5 * $spacing-l;
+}
+
 label.numeric-toggle-time {
-    height: 100%;
+    height: auto;
 }
 
 /* @end */
